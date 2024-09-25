@@ -49,7 +49,7 @@ public class Framework extends javax.swing.JPanel {
     public static void main(String[] args){
     JFrame f = new JFrame();
     f.setContentPane(new Framework());
-    f.setSize(1000,563);
+    f.setSize(1000,600);
     f.setResizable(false);
     f.setLocationRelativeTo(null);
     f.setVisible(true);
