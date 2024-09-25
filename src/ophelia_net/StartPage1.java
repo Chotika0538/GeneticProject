@@ -10,12 +10,12 @@ import javax.swing.JFrame;
  *
  * @author LENOVO
  */
-public class WarningPage2 extends javax.swing.JPanel {
+public class StartPage1 extends javax.swing.JPanel {
 
     /**
-     * Creates new form WarningPage2
+     * Creates new form StartPage1
      */
-    public WarningPage2() {
+    public StartPage1() {
         initComponents();
     }
 
@@ -29,7 +29,6 @@ public class WarningPage2 extends javax.swing.JPanel {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -37,28 +36,29 @@ public class WarningPage2 extends javax.swing.JPanel {
 
         jButton1.setBackground(new java.awt.Color(242, 242, 242));
         jButton1.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        jButton1.setText("< Back");
+        jButton1.setText("START");
         jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         add(jButton1);
-        jButton1.setBounds(150, 570, 110, 40);
+        jButton1.setBounds(540, 540, 110, 40);
 
-        jButton2.setBackground(new java.awt.Color(242, 242, 242));
-        jButton2.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        jButton2.setText("Next >");
-        jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
-        add(jButton2);
-        jButton2.setBounds(930, 570, 110, 40);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\19.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\18.jpg")); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel1.setPreferredSize(new java.awt.Dimension(1200, 700));
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
     /* testing panel*/
     public static void main(String[] args){
     JFrame f = new JFrame();
-    f.setContentPane(new WarningPage2());
+    f.setContentPane(new StartPage1());
     f.setSize(1200,700);
     f.setResizable(false);
     f.setLocationRelativeTo(null);
@@ -66,10 +66,8 @@ public class WarningPage2 extends javax.swing.JPanel {
     f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 }
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

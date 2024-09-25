@@ -10,12 +10,12 @@ import javax.swing.JFrame;
  *
  * @author LENOVO
  */
-public class WarningPage2 extends javax.swing.JPanel {
+public class PoppyTestimony extends javax.swing.JPanel {
 
     /**
-     * Creates new form WarningPage2
+     * Creates new form PoppyTestimony
      */
-    public WarningPage2() {
+    public PoppyTestimony() {
         initComponents();
     }
 
@@ -35,30 +35,36 @@ public class WarningPage2 extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(242, 242, 242));
         jButton1.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         jButton1.setText("< Back");
         jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
         add(jButton1);
-        jButton1.setBounds(150, 570, 110, 40);
+        jButton1.setBounds(110, 600, 100, 40);
 
-        jButton2.setBackground(new java.awt.Color(242, 242, 242));
         jButton2.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         jButton2.setText("Next >");
         jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         add(jButton2);
-        jButton2.setBounds(930, 570, 110, 40);
+        jButton2.setBounds(990, 600, 100, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\19.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\28.jpg")); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel1.setPreferredSize(new java.awt.Dimension(1200, 700));
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
     /* testing panel*/
     public static void main(String[] args){
     JFrame f = new JFrame();
-    f.setContentPane(new WarningPage2());
+    f.setContentPane(new PoppyTestimony());
     f.setSize(1200,700);
     f.setResizable(false);
     f.setLocationRelativeTo(null);
