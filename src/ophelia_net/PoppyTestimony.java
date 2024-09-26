@@ -35,12 +35,14 @@ public class PoppyTestimony extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
 
+        jButton1.setBackground(new java.awt.Color(242, 242, 242));
         jButton1.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         jButton1.setText("< Back");
         jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
         add(jButton1);
         jButton1.setBounds(110, 600, 100, 40);
 
+        jButton2.setBackground(new java.awt.Color(242, 242, 242));
         jButton2.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         jButton2.setText("Next >");
         jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
