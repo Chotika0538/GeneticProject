@@ -10,12 +10,12 @@ import javax.swing.JFrame;
  *
  * @author LENOVO
  */
-public class AmiTestimony extends javax.swing.JPanel {
+public class chooseT1 extends javax.swing.JPanel {
 
     /**
-     * Creates new form AmiTestimony
+     * Creates new form chooseT1
      */
-    public AmiTestimony() {
+    public chooseT1() {
         initComponents();
     }
 
@@ -30,6 +30,9 @@ public class AmiTestimony extends javax.swing.JPanel {
 
         backBT = new javax.swing.JButton();
         nextBT = new javax.swing.JButton();
+        fileLB = new javax.swing.JLabel();
+        coin = new javax.swing.JLabel();
+        coinLB = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -37,36 +40,50 @@ public class AmiTestimony extends javax.swing.JPanel {
 
         backBT.setBackground(new java.awt.Color(242, 242, 242));
         backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        backBT.setText("< Back");
-        backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
+        backBT.setText("Next >");
+        backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
+        backBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBTActionPerformed(evt);
+            }
+        });
         add(backBT);
-        backBT.setBounds(110, 600, 100, 40);
+        backBT.setBounds(990, 600, 100, 40);
 
         nextBT.setBackground(new java.awt.Color(242, 242, 242));
         nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        nextBT.setText("Next >");
-        nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
-        nextBT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nextBTActionPerformed(evt);
-            }
-        });
+        nextBT.setText("< Back");
+        nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
         add(nextBT);
-        nextBT.setBounds(990, 600, 100, 40);
+        nextBT.setBounds(130, 600, 100, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\32.jpg")); // NOI18N
+        fileLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\filebg.png")); // NOI18N
+        add(fileLB);
+        fileLB.setBounds(1000, 20, 70, 70);
+
+        coin.setFont(new java.awt.Font("Leelawadee", 1, 20)); // NOI18N
+        coin.setText("   3");
+        coin.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        add(coin);
+        coin.setBounds(1100, 40, 50, 20);
+
+        coinLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\coin.png")); // NOI18N
+        add(coinLB);
+        coinLB.setBounds(1090, 20, 63, 63);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\t1.jpg")); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
+    private void backBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nextBTActionPerformed
-   /* testing panel*/
+    }//GEN-LAST:event_backBTActionPerformed
+    /* testing panel*/
     public static void main(String[] args){
     JFrame f = new JFrame();
-    f.setContentPane(new AmiTestimony());
+    f.setContentPane(new chooseT1());
     f.setSize(1200,700);
     f.setResizable(false);
     f.setLocationRelativeTo(null);
@@ -76,6 +93,9 @@ public class AmiTestimony extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBT;
+    private javax.swing.JLabel coin;
+    private javax.swing.JLabel coinLB;
+    private javax.swing.JLabel fileLB;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton nextBT;
     // End of variables declaration//GEN-END:variables

@@ -28,23 +28,23 @@ public class StartPage1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        startBT = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(242, 242, 242));
-        jButton1.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        jButton1.setText("START");
-        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        startBT.setBackground(new java.awt.Color(242, 242, 242));
+        startBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        startBT.setText("START");
+        startBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
+        startBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                startBTActionPerformed(evt);
             }
         });
-        add(jButton1);
-        jButton1.setBounds(540, 540, 110, 40);
+        add(startBT);
+        startBT.setBounds(540, 540, 110, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\18.jpg")); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -52,9 +52,9 @@ public class StartPage1 extends javax.swing.JPanel {
         jLabel1.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void startBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startBTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_startBTActionPerformed
     /* testing panel*/
     public static void main(String[] args){
     JFrame f = new JFrame();
@@ -67,7 +67,7 @@ public class StartPage1 extends javax.swing.JPanel {
 }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton startBT;
     // End of variables declaration//GEN-END:variables
 }

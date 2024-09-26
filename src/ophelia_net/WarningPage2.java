@@ -28,30 +28,29 @@ public class WarningPage2 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        backBT = new javax.swing.JButton();
+        nextBT = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(242, 242, 242));
-        jButton1.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        jButton1.setText("< Back");
-        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
-        add(jButton1);
-        jButton1.setBounds(150, 570, 110, 40);
+        backBT.setBackground(new java.awt.Color(242, 242, 242));
+        backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        backBT.setText("< Back");
+        backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
+        add(backBT);
+        backBT.setBounds(150, 570, 110, 40);
 
-        jButton2.setBackground(new java.awt.Color(242, 242, 242));
-        jButton2.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        jButton2.setText("Next >");
-        jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
-        add(jButton2);
-        jButton2.setBounds(930, 570, 110, 40);
+        nextBT.setBackground(new java.awt.Color(242, 242, 242));
+        nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        nextBT.setText("Next >");
+        nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
+        add(nextBT);
+        nextBT.setBounds(930, 570, 110, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\19.jpg")); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel1.setPreferredSize(new java.awt.Dimension(1200, 700));
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
@@ -68,8 +67,8 @@ public class WarningPage2 extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton backBT;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton nextBT;
     // End of variables declaration//GEN-END:variables
 }
