@@ -10,12 +10,12 @@ import javax.swing.JFrame;
  *
  * @author LENOVO
  */
-public class chooseT3 extends javax.swing.JPanel {
+public class fingerprint1_1 extends javax.swing.JPanel {
 
     /**
-     * Creates new form chooseT3
+     * Creates new form fingerprint1_1
      */
-    public chooseT3() {
+    public fingerprint1_1() {
         initComponents();
     }
 
@@ -29,10 +29,6 @@ public class chooseT3 extends javax.swing.JPanel {
     private void initComponents() {
 
         nextBT = new javax.swing.JButton();
-        backBT = new javax.swing.JButton();
-        fileLB = new javax.swing.JLabel();
-        coin = new javax.swing.JLabel();
-        coinLB = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -50,28 +46,7 @@ public class chooseT3 extends javax.swing.JPanel {
         add(nextBT);
         nextBT.setBounds(970, 590, 100, 40);
 
-        backBT.setBackground(new java.awt.Color(242, 242, 242));
-        backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        backBT.setText("< Back");
-        backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
-        add(backBT);
-        backBT.setBounds(140, 590, 100, 40);
-
-        fileLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\filebg.png")); // NOI18N
-        add(fileLB);
-        fileLB.setBounds(1000, 20, 70, 70);
-
-        coin.setFont(new java.awt.Font("Leelawadee", 1, 20)); // NOI18N
-        coin.setText("   3");
-        coin.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        add(coin);
-        coin.setBounds(1100, 40, 50, 20);
-
-        coinLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\coin.png")); // NOI18N
-        add(coinLB);
-        coinLB.setBounds(1090, 20, 63, 63);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\t3.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\fwine1.jpg")); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1200, 700);
@@ -80,22 +55,18 @@ public class chooseT3 extends javax.swing.JPanel {
     private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nextBTActionPerformed
-    /* testing panel*/
+   /* testing panel*/
     public static void main(String[] args){
-    JFrame f = new JFrame();
-    f.setContentPane(new chooseT3());
-    f.setSize(1200,700);
-    f.setResizable(false);
-    f.setLocationRelativeTo(null);
-    f.setVisible(true);
-    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-}
+        JFrame f = new JFrame();
+        f.setContentPane(new fingerprint1_1());
+        f.setSize(1200,700);
+        f.setResizable(false);
+        f.setLocationRelativeTo(null);
+        f.setVisible(true);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backBT;
-    private javax.swing.JLabel coin;
-    private javax.swing.JLabel coinLB;
-    private javax.swing.JLabel fileLB;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton nextBT;
     // End of variables declaration//GEN-END:variables

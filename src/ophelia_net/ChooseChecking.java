@@ -8,12 +8,12 @@ import javax.swing.JFrame;
  *
  * @author LENOVO
  */
-public class ChooseTestimony extends javax.swing.JPanel {
+public class ChooseChecking extends javax.swing.JPanel {
 
     /**
      * Creates new form ChooseTestimony
      */
-    public ChooseTestimony() {
+    public ChooseChecking() {
         initComponents();
     }
 
@@ -71,7 +71,7 @@ public class ChooseTestimony extends javax.swing.JPanel {
     /* testing panel*/
     public static void main(String[] args){
     JFrame f = new JFrame();
-    f.setContentPane(new ChooseTestimony());
+    f.setContentPane(new ChooseChecking());
     f.setSize(1200,700);
     f.setResizable(false);
     f.setLocationRelativeTo(null);

@@ -48,14 +48,14 @@ public class chooseT1 extends javax.swing.JPanel {
             }
         });
         add(backBT);
-        backBT.setBounds(990, 600, 100, 40);
+        backBT.setBounds(990, 590, 100, 40);
 
         nextBT.setBackground(new java.awt.Color(242, 242, 242));
         nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         nextBT.setText("< Back");
         nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
         add(nextBT);
-        nextBT.setBounds(130, 600, 100, 40);
+        nextBT.setBounds(130, 590, 100, 40);
 
         fileLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\filebg.png")); // NOI18N
         add(fileLB);
