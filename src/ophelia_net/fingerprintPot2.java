@@ -56,14 +56,9 @@ public class fingerprintPot2 extends javax.swing.JPanel {
         add(coin);
         coin.setBounds(1110, 40, 50, 20);
 
-        try{
-            URL imageUrl = getClass().getResource("/ophelia_net/coin.png");
-            coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png")));
-        } catch(Exception e){
-            System.out.println("error");
-        }
+        coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png"))); // NOI18N
         add(coinLB);
-        coinLB.setBounds(1100, 20, 0, 0);
+        coinLB.setBounds(1100, 10, 70, 80);
 
         fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
         add(fileLB1);
