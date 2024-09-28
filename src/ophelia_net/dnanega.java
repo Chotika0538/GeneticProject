@@ -64,15 +64,15 @@ public class dnanega extends javax.swing.JPanel {
         add(coin);
         coin.setBounds(1110, 40, 50, 20);
 
-        coinLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\coin.png")); // NOI18N
+        coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png"))); // NOI18N
         add(coinLB);
-        coinLB.setBounds(1100, 20, 63, 63);
+        coinLB.setBounds(1100, 20, 60, 60);
 
-        toolLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\hint.png")); // NOI18N
+        toolLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
         add(toolLB);
         toolLB.setBounds(980, 10, 70, 80);
 
-        fileLB1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\filebg.png")); // NOI18N
+        fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
         add(fileLB1);
         fileLB1.setBounds(1040, 20, 70, 70);
 
@@ -96,7 +96,7 @@ public class dnanega extends javax.swing.JPanel {
         add(chooseT4);
         chooseT4.setBounds(730, 530, 20, 20);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\dnanega.jpg")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/dnanega.jpg"))); // NOI18N
         jLabel7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel7);
         jLabel7.setBounds(0, 0, 1200, 700);
@@ -126,8 +126,6 @@ public class dnanega extends javax.swing.JPanel {
     private javax.swing.JLabel coinLB;
     private javax.swing.JLabel fileLB1;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JButton startBT;
-    private javax.swing.JButton startBT1;
     private javax.swing.JLabel toolLB;
     // End of variables declaration//GEN-END:variables
 }

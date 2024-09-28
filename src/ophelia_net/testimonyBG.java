@@ -46,7 +46,7 @@ public class testimonyBG extends javax.swing.JPanel {
         add(nextBT);
         nextBT.setBounds(1000, 590, 100, 40);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\testimonyBG.jpg")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/testimonyBG.jpg"))); // NOI18N
         jLabel7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel7);
         jLabel7.setBounds(0, 0, 1200, 700);

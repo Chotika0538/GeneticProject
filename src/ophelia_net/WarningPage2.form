@@ -72,7 +72,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\LENOVO\Desktop\Aom&apos;s GeneticProject\19.jpg"/>
+          <Image iconType="3" name="/ophelia_net/19.jpg"/>
         </Property>
         <Property name="verticalAlignment" type="int" value="1"/>
       </Properties>

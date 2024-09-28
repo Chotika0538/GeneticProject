@@ -54,7 +54,7 @@ public class PoppyTestimony extends javax.swing.JPanel {
         add(nextBT);
         nextBT.setBounds(990, 600, 100, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\28.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/28.jpg"))); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);

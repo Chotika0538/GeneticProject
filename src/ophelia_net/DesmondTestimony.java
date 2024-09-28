@@ -54,7 +54,7 @@ public class DesmondTestimony extends javax.swing.JPanel {
         add(backBT);
         backBT.setBounds(110, 600, 100, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\30.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/30.jpg"))); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1200, 700);

@@ -57,7 +57,7 @@ public class chooseT3 extends javax.swing.JPanel {
         add(backBT);
         backBT.setBounds(140, 590, 100, 40);
 
-        fileLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\filebg.png")); // NOI18N
+        fileLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
         add(fileLB);
         fileLB.setBounds(1000, 20, 70, 70);
 
@@ -67,11 +67,11 @@ public class chooseT3 extends javax.swing.JPanel {
         add(coin);
         coin.setBounds(1100, 40, 50, 20);
 
-        coinLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\coin.png")); // NOI18N
+        coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png"))); // NOI18N
         add(coinLB);
-        coinLB.setBounds(1090, 20, 63, 63);
+        coinLB.setBounds(1090, 20, 60, 60);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\t3.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/t3.jpg"))); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1200, 700);

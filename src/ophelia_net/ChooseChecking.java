@@ -43,27 +43,27 @@ public class ChooseChecking extends javax.swing.JPanel {
         add(coin);
         coin.setBounds(1100, 40, 50, 20);
 
-        coinLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\coin.png")); // NOI18N
+        coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png"))); // NOI18N
         add(coinLB);
-        coinLB.setBounds(1090, 20, 63, 63);
+        coinLB.setBounds(1090, 20, 60, 60);
 
-        fileLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\filebg.png")); // NOI18N
+        fileLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
         add(fileLB);
         fileLB.setBounds(1000, 20, 70, 70);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\c3.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/c3.png"))); // NOI18N
         add(jLabel1);
         jLabel1.setBounds(800, 140, 372, 456);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\cfgp.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/cfgp.png"))); // NOI18N
         add(jLabel5);
         jLabel5.setBounds(20, 140, 372, 456);
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\cdna.png")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/cdna.png"))); // NOI18N
         add(jLabel6);
         jLabel6.setBounds(410, 140, 372, 456);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\navybg.jpg")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/navybg.jpg"))); // NOI18N
         jLabel7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel7);
         jLabel7.setBounds(0, 0, 1200, 700);

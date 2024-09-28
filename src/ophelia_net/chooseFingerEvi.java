@@ -38,8 +38,11 @@ public class chooseFingerEvi extends javax.swing.JPanel {
         coinLB = new javax.swing.JLabel();
         toolLB = new javax.swing.JLabel();
         fileLB1 = new javax.swing.JLabel();
+        boxLB = new javax.swing.JLabel();
         plateLB = new javax.swing.JLabel();
-        plateLB1 = new javax.swing.JLabel();
+        medbottleLB = new javax.swing.JLabel();
+        water = new javax.swing.JLabel();
+        wineLB = new javax.swing.JLabel();
         navybg = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -55,7 +58,7 @@ public class chooseFingerEvi extends javax.swing.JPanel {
             }
         });
         add(wineBT);
-        wineBT.setBounds(200, 290, 110, 40);
+        wineBT.setBounds(210, 240, 110, 40);
 
         plateBT.setBackground(new java.awt.Color(242, 242, 242));
         plateBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -67,7 +70,7 @@ public class chooseFingerEvi extends javax.swing.JPanel {
             }
         });
         add(plateBT);
-        plateBT.setBounds(510, 240, 110, 40);
+        plateBT.setBounds(540, 510, 110, 40);
 
         spoonBT.setBackground(new java.awt.Color(242, 242, 242));
         spoonBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -79,7 +82,7 @@ public class chooseFingerEvi extends javax.swing.JPanel {
             }
         });
         add(spoonBT);
-        spoonBT.setBounds(520, 510, 110, 40);
+        spoonBT.setBounds(540, 240, 110, 40);
 
         potBT.setBackground(new java.awt.Color(242, 242, 242));
         potBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -91,7 +94,7 @@ public class chooseFingerEvi extends javax.swing.JPanel {
             }
         });
         add(potBT);
-        potBT.setBounds(820, 240, 110, 40);
+        potBT.setBounds(890, 510, 110, 40);
 
         waterBT.setBackground(new java.awt.Color(242, 242, 242));
         waterBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -103,7 +106,7 @@ public class chooseFingerEvi extends javax.swing.JPanel {
             }
         });
         add(waterBT);
-        waterBT.setBounds(790, 480, 110, 40);
+        waterBT.setBounds(220, 510, 110, 40);
 
         boxBT.setBackground(new java.awt.Color(242, 242, 242));
         boxBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -115,7 +118,7 @@ public class chooseFingerEvi extends javax.swing.JPanel {
             }
         });
         add(boxBT);
-        boxBT.setBounds(210, 480, 110, 40);
+        boxBT.setBounds(890, 240, 110, 40);
 
         coin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
         coin.setFont(new java.awt.Font("Leelawadee", 1, 20)); // NOI18N
@@ -125,31 +128,43 @@ public class chooseFingerEvi extends javax.swing.JPanel {
         add(coin);
         coin.setBounds(1110, 40, 50, 20);
 
-        coinLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\coin.png")); // NOI18N
+        coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png"))); // NOI18N
         add(coinLB);
         coinLB.setBounds(1100, 20, 63, 63);
 
-        toolLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\hint.png")); // NOI18N
+        toolLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
         add(toolLB);
         toolLB.setBounds(980, 10, 70, 80);
 
-        fileLB1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\filebg.png")); // NOI18N
+        fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
         add(fileLB1);
         fileLB1.setBounds(1040, 20, 70, 70);
 
-        plateLB.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\box.png")); // NOI18N
+        boxLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/box.png"))); // NOI18N
+        add(boxLB);
+        boxLB.setBounds(830, 60, 213, 213);
+
+        plateLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/plate.png"))); // NOI18N
         add(plateLB);
-        plateLB.setBounds(780, 50, 213, 213);
+        plateLB.setBounds(170, 310, 200, 200);
+        plateLB.getAccessibleContext().setAccessibleDescription("");
 
-        plateLB1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\plate.png")); // NOI18N
-        add(plateLB1);
-        plateLB1.setBounds(480, 310, 200, 200);
-        plateLB1.getAccessibleContext().setAccessibleDescription("");
+        medbottleLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/medicineBottle.png"))); // NOI18N
+        add(medbottleLB);
+        medbottleLB.setBounds(840, 300, 200, 200);
 
-        navybg.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\navybg.jpg")); // NOI18N
+        water.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/water.png"))); // NOI18N
+        add(water);
+        water.setBounds(490, 40, 190, 180);
+
+        wineLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/wine.png"))); // NOI18N
+        add(wineLB);
+        wineLB.setBounds(160, 30, 200, 200);
+
+        navybg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/navybg.jpg"))); // NOI18N
         navybg.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(navybg);
-        navybg.setBounds(0, 0, 1200, 700);
+        navybg.setBounds(10, -10, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
 
     private void wineBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wineBTActionPerformed
@@ -188,17 +203,20 @@ public class chooseFingerEvi extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton boxBT;
+    private javax.swing.JLabel boxLB;
     private javax.swing.JLabel coin;
     private javax.swing.JLabel coinLB;
     private javax.swing.JLabel fileLB1;
+    private javax.swing.JLabel medbottleLB;
     private javax.swing.JLabel navybg;
     private javax.swing.JButton plateBT;
     private javax.swing.JLabel plateLB;
-    private javax.swing.JLabel plateLB1;
     private javax.swing.JButton potBT;
     private javax.swing.JButton spoonBT;
     private javax.swing.JLabel toolLB;
+    private javax.swing.JLabel water;
     private javax.swing.JButton waterBT;
     private javax.swing.JButton wineBT;
+    private javax.swing.JLabel wineLB;
     // End of variables declaration//GEN-END:variables
 }

@@ -49,7 +49,7 @@ public class WarningPage2 extends javax.swing.JPanel {
         add(nextBT);
         nextBT.setBounds(930, 570, 110, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LENOVO\\Desktop\\Aom's GeneticProject\\19.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/19.jpg"))); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);
