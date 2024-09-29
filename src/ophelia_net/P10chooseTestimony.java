@@ -4,18 +4,23 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
  * @author LENOVO
  */
 public class P10chooseTestimony extends javax.swing.JPanel {
-
+   private CardLayout cd;
+    private JPanel mainPanel;
     /**
-     * Creates new form P10chooseTestimony
+     * Creates new form StartPage1
      */
-    public P10chooseTestimony() {
+    public P10chooseTestimony(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
     }
 
@@ -113,26 +118,26 @@ public class P10chooseTestimony extends javax.swing.JPanel {
     }//GEN-LAST:event_backBTActionPerformed
 
     private void chosseT1BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chosseT1BTActionPerformed
-
+        cd.show(mainPanel, "choose1");
     }//GEN-LAST:event_chosseT1BTActionPerformed
 
     private void chooseT2BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseT2BTActionPerformed
-
+        cd.show(mainPanel, "choose2");
     }//GEN-LAST:event_chooseT2BTActionPerformed
 
     private void chooseT3BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseT3BTActionPerformed
-
+        cd.show(mainPanel, "choose3");
     }//GEN-LAST:event_chooseT3BTActionPerformed
     /* testing panel*/
-    public static void main(String[] args){
-    JFrame f = new JFrame();
-    f.setContentPane(new P10chooseTestimony());
-    f.setSize(1200,700);
-    f.setResizable(false);
-    f.setLocationRelativeTo(null);
-    f.setVisible(true);
-    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-}
+//    public static void main(String[] args){
+//    JFrame f = new JFrame();
+//    f.setContentPane(new P10chooseTestimony());
+//    f.setSize(1200,700);
+//    f.setResizable(false);
+//    f.setLocationRelativeTo(null);
+//    f.setVisible(true);
+//    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBT;

@@ -4,18 +4,23 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
  * @author LENOVO
  */
 public class P8DesmondTestimony extends javax.swing.JPanel {
-
+    private CardLayout cd;
+    private JPanel mainPanel;
     /**
-     * Creates new form DesmondTestimony
+     * Creates new form StartPage1
      */
-    public P8DesmondTestimony() {
+    public P8DesmondTestimony(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
     }
 
@@ -39,6 +44,11 @@ public class P8DesmondTestimony extends javax.swing.JPanel {
         nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         nextBT.setText("Next >");
         nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
+        nextBT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextBTMouseClicked(evt);
+            }
+        });
         nextBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextBTActionPerformed(evt);
@@ -51,6 +61,11 @@ public class P8DesmondTestimony extends javax.swing.JPanel {
         backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         backBT.setText("< Back");
         backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
+        backBT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backBTMouseClicked(evt);
+            }
+        });
         add(backBT);
         backBT.setBounds(110, 600, 100, 40);
 
@@ -61,22 +76,31 @@ public class P8DesmondTestimony extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_nextBTActionPerformed
 
-    /* testing panel*/
-    public static void main(String[] args){
-    JFrame f = new JFrame();
-    f.setContentPane(new P8DesmondTestimony());
-    f.setSize(1200,700);
-    f.setResizable(false);
-    f.setLocationRelativeTo(null);
-    f.setVisible(true);
-    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-}
+    private void nextBTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextBTMouseClicked
+        cd.show(mainPanel, "poppytest");
+    }//GEN-LAST:event_nextBTMouseClicked
+
+    private void backBTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBTMouseClicked
+        cd.show(mainPanel, "amitest");
+    }//GEN-LAST:event_backBTMouseClicked
+
+//    /* testing panel*/
+//    public static void main(String[] args){
+//    JFrame f = new JFrame();
+//    f.setContentPane(new P8DesmondTestimony());
+//    f.setSize(1200,700);
+//    f.setResizable(false);
+//    f.setLocationRelativeTo(null);
+//    f.setVisible(true);
+//    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBT;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton nextBT;
     // End of variables declaration//GEN-END:variables
 }
+

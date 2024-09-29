@@ -4,18 +4,23 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
  * @author LENOVO
  */
-public class P6testimonyBG extends javax.swing.JPanel {
-
+public class P5testimonyBG extends javax.swing.JPanel {
+   private CardLayout cd;
+    private JPanel mainPanel;
     /**
-     * Creates new form testimonyBG
+     * Creates new form StartPage1
      */
-    public P6testimonyBG() {
+    public P5testimonyBG(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
     }
 
@@ -38,6 +43,11 @@ public class P6testimonyBG extends javax.swing.JPanel {
         nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         nextBT.setText("Next >");
         nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
+        nextBT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextBTMouseClicked(evt);
+            }
+        });
         nextBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextBTActionPerformed(evt);
@@ -53,18 +63,23 @@ public class P6testimonyBG extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_nextBTActionPerformed
-    /* testing panel*/
-    public static void main(String[] args){
-    JFrame f = new JFrame();
-    f.setContentPane(new P6testimonyBG());
-    f.setSize(1200,700);
-    f.setResizable(false);
-    f.setLocationRelativeTo(null);
-    f.setVisible(true);
-    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-}
+
+    private void nextBTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextBTMouseClicked
+        // TODO add your handling code here:
+        cd.show(mainPanel, "amitest");
+    }//GEN-LAST:event_nextBTMouseClicked
+//    /* testing panel*/
+//    public static void main(String[] args){
+//    JFrame f = new JFrame();
+//    f.setContentPane(new P5testimonyBG());
+//    f.setSize(1200,700);
+//    f.setResizable(false);
+//    f.setLocationRelativeTo(null);
+//    f.setVisible(true);
+//    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//}
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

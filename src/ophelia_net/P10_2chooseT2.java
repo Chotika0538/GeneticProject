@@ -4,18 +4,23 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
  * @author LENOVO
  */
 public class P10_2chooseT2 extends javax.swing.JPanel {
-
+    private CardLayout cd;
+    private JPanel mainPanel;
     /**
-     * Creates new form chooseT2
+     * Creates new form StartPage1
      */
-    public P10_2chooseT2() {
+    public P10_2chooseT2(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
     }
 
@@ -28,7 +33,6 @@ public class P10_2chooseT2 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        backBT = new javax.swing.JButton();
         nextBT = new javax.swing.JButton();
         fileLB = new javax.swing.JLabel();
         coin = new javax.swing.JLabel();
@@ -38,22 +42,15 @@ public class P10_2chooseT2 extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
 
-        backBT.setBackground(new java.awt.Color(242, 242, 242));
-        backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        backBT.setText("Next >");
-        backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
-        backBT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBTActionPerformed(evt);
-            }
-        });
-        add(backBT);
-        backBT.setBounds(990, 590, 100, 40);
-
         nextBT.setBackground(new java.awt.Color(242, 242, 242));
         nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         nextBT.setText("< Back");
         nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
+        nextBT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextBTMouseClicked(evt);
+            }
+        });
         add(nextBT);
         nextBT.setBounds(130, 590, 100, 40);
 
@@ -77,22 +74,22 @@ public class P10_2chooseT2 extends javax.swing.JPanel {
         jLabel2.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTActionPerformed
+    private void nextBTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextBTMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_backBTActionPerformed
-    /* testing panel*/
-    public static void main(String[] args){
-    JFrame f = new JFrame();
-    f.setContentPane(new P10_2chooseT2());
-    f.setSize(1200,700);
-    f.setResizable(false);
-    f.setLocationRelativeTo(null);
-    f.setVisible(true);
-    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-}
+        cd.show(mainPanel, "choosetestbg");
+    }//GEN-LAST:event_nextBTMouseClicked
+//    /* testing panel*/
+//    public static void main(String[] args){
+//    JFrame f = new JFrame();
+//    f.setContentPane(new P10_2chooseT2());
+//    f.setSize(1200,700);
+//    f.setResizable(false);
+//    f.setLocationRelativeTo(null);
+//    f.setVisible(true);
+//    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backBT;
     private javax.swing.JLabel coin;
     private javax.swing.JLabel coinLB;
     private javax.swing.JLabel fileLB;

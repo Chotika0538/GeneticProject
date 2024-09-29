@@ -79,6 +79,7 @@ public class P2WarningPage extends javax.swing.JPanel {
 
     private void nextBTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextBTMouseClicked
         // TODO add your handling code here:
+        cd.show(mainPanel, "story");
     }//GEN-LAST:event_nextBTMouseClicked
 //    /* testing panel*/
 //    public static void main(String[] args){

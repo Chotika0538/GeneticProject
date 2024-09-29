@@ -58,6 +58,11 @@ public class P11_1_Boxfbox1Ricko extends javax.swing.JPanel {
         finger2BT.setBackground(new java.awt.Color(139, 224, 159));
         finger2BT.setFont(new java.awt.Font("MiTNThin", 1, 24)); // NOI18N
         finger2BT.setText("รอยนิ้วมือที่ 2");
+        finger2BT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                finger2BTActionPerformed(evt);
+            }
+        });
         add(finger2BT);
         finger2BT.setBounds(310, 130, 200, 110);
 
@@ -69,6 +74,10 @@ public class P11_1_Boxfbox1Ricko extends javax.swing.JPanel {
     private void finger1BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finger1BTActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_finger1BTActionPerformed
+
+    private void finger2BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finger2BTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_finger2BTActionPerformed
   /* testing panel*/
     public static void main(String[] args){
         JFrame f = new JFrame();

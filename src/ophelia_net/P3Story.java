@@ -4,16 +4,22 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author LENOVO
  */
 public class P3Story extends javax.swing.JPanel {
-
+   private CardLayout cd;
+    private JPanel mainPanel;
     /**
-     * Creates new form P3Story
+     * Creates new form StartPage1
      */
-    public P3Story() {
+    public P3Story(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
     }
 
@@ -36,6 +42,11 @@ public class P3Story extends javax.swing.JPanel {
         nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         nextBT.setText("Next >");
         nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
+        nextBT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nextBTMouseClicked(evt);
+            }
+        });
         nextBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextBTActionPerformed(evt);
@@ -44,7 +55,13 @@ public class P3Story extends javax.swing.JPanel {
         add(nextBT);
         nextBT.setBounds(990, 600, 100, 40);
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/story.jpg"))); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
@@ -52,6 +69,14 @@ public class P3Story extends javax.swing.JPanel {
     private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nextBTActionPerformed
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void nextBTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextBTMouseClicked
+        cd.show(mainPanel, "evidence");        // TODO add your handling code here:
+    }//GEN-LAST:event_nextBTMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

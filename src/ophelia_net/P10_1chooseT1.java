@@ -4,18 +4,23 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
  * @author LENOVO
  */
 public class P10_1chooseT1 extends javax.swing.JPanel {
-
+    private CardLayout cd;
+    private JPanel mainPanel;
     /**
-     * Creates new form chooseT1
+     * Creates new form StartPage1
      */
-    public P10_1chooseT1() {
+    public P10_1chooseT1(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
     }
 
@@ -29,7 +34,6 @@ public class P10_1chooseT1 extends javax.swing.JPanel {
     private void initComponents() {
 
         backBT = new javax.swing.JButton();
-        nextBT = new javax.swing.JButton();
         fileLB = new javax.swing.JLabel();
         coin = new javax.swing.JLabel();
         coinLB = new javax.swing.JLabel();
@@ -40,22 +44,15 @@ public class P10_1chooseT1 extends javax.swing.JPanel {
 
         backBT.setBackground(new java.awt.Color(242, 242, 242));
         backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        backBT.setText("Next >");
-        backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
-        backBT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBTActionPerformed(evt);
+        backBT.setText("< Back");
+        backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
+        backBT.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backBTMouseClicked(evt);
             }
         });
         add(backBT);
-        backBT.setBounds(990, 590, 100, 40);
-
-        nextBT.setBackground(new java.awt.Color(242, 242, 242));
-        nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        nextBT.setText("< Back");
-        nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
-        add(nextBT);
-        nextBT.setBounds(130, 590, 100, 40);
+        backBT.setBounds(130, 590, 100, 40);
 
         fileLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
         add(fileLB);
@@ -77,19 +74,19 @@ public class P10_1chooseT1 extends javax.swing.JPanel {
         jLabel2.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backBTActionPerformed
-    /* testing panel*/
-    public static void main(String[] args){
-    JFrame f = new JFrame();
-    f.setContentPane(new P10_1chooseT1());
-    f.setSize(1200,700);
-    f.setResizable(false);
-    f.setLocationRelativeTo(null);
-    f.setVisible(true);
-    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-}
+    private void backBTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBTMouseClicked
+        cd.show(mainPanel, "choosetestbg");
+    }//GEN-LAST:event_backBTMouseClicked
+//    /* testing panel*/
+//    public static void main(String[] args){
+//    JFrame f = new JFrame();
+//    f.setContentPane(new P10_1chooseT1());
+//    f.setSize(1200,700);
+//    f.setResizable(false);
+//    f.setLocationRelativeTo(null);
+//    f.setVisible(true);
+//    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBT;
@@ -97,6 +94,5 @@ public class P10_1chooseT1 extends javax.swing.JPanel {
     private javax.swing.JLabel coinLB;
     private javax.swing.JLabel fileLB;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton nextBT;
     // End of variables declaration//GEN-END:variables
 }
