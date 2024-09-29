@@ -20,6 +20,17 @@
     </copy>
 </target>
     <import file="nbproject/build-impl.xml"/>
+    <!-- คำสั่งที่เพิ่มเข้ามา -->
+    <target name="-post-compile">
+        <copy todir="${build.classes.dir}">
+            <fileset dir="src">
+                <!-- คัดลอกทุกไฟล์ที่อยู่ใน resources -->
+                <include name="**/*.png"/>
+                <include name="**/*.jpg"/>
+                <include name="**/*.gif"/>
+            </fileset>
+        </copy>
+    </target>
     <!--
 
     There exist several targets which are by default empty and which can be 
