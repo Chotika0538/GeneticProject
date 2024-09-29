@@ -10,12 +10,12 @@ import javax.swing.JFrame;
  *
  * @author LENOVO
  */
-public class fingerprintWine_2 extends javax.swing.JPanel {
+public class fingerprintPlate extends javax.swing.JPanel {
 
     /**
-     * Creates new form fingerprint1_2
+     * Creates new form fingerprintPlate
      */
-    public fingerprintWine_2() {
+    public fingerprintPlate() {
         initComponents();
     }
 
@@ -29,19 +29,19 @@ public class fingerprintWine_2 extends javax.swing.JPanel {
     private void initComponents() {
 
         confirmBT = new javax.swing.JButton();
-        backBT = new javax.swing.JButton();
+        fileLB1 = new javax.swing.JLabel();
+        toolLB = new javax.swing.JLabel();
         coin = new javax.swing.JLabel();
         coinLB = new javax.swing.JLabel();
-        toolLB = new javax.swing.JLabel();
-        fileLB1 = new javax.swing.JLabel();
+        zoomRickoBT = new javax.swing.JButton();
+        zoomPoppyBT = new javax.swing.JButton();
         zoomAmiBT = new javax.swing.JButton();
         zoomDesmondBT = new javax.swing.JButton();
-        zoomPoppyBT = new javax.swing.JButton();
-        zoomRickoBT = new javax.swing.JButton();
         chooseAmi = new javax.swing.JCheckBox();
         chooseDesmond = new javax.swing.JCheckBox();
         choosePoppy = new javax.swing.JCheckBox();
         chooseRicko = new javax.swing.JCheckBox();
+        finger1BT = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -57,14 +57,15 @@ public class fingerprintWine_2 extends javax.swing.JPanel {
             }
         });
         add(confirmBT);
-        confirmBT.setBounds(970, 590, 100, 40);
+        confirmBT.setBounds(1020, 600, 100, 40);
 
-        backBT.setBackground(new java.awt.Color(242, 242, 242));
-        backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        backBT.setText("< Back");
-        backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
-        add(backBT);
-        backBT.setBounds(140, 590, 100, 40);
+        fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
+        add(fileLB1);
+        fileLB1.setBounds(1040, 20, 70, 70);
+
+        toolLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
+        add(toolLB);
+        toolLB.setBounds(980, 10, 70, 80);
 
         coin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
         coin.setFont(new java.awt.Font("Leelawadee", 1, 20)); // NOI18N
@@ -78,37 +79,17 @@ public class fingerprintWine_2 extends javax.swing.JPanel {
         add(coinLB);
         coinLB.setBounds(1100, 20, 63, 63);
 
-        toolLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
-        add(toolLB);
-        toolLB.setBounds(980, 10, 70, 80);
-
-        fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
-        add(fileLB1);
-        fileLB1.setBounds(1040, 20, 70, 70);
-
-        zoomAmiBT.setBackground(new java.awt.Color(242, 242, 242));
-        zoomAmiBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        zoomAmiBT.setText("ZOOM");
-        zoomAmiBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
-        zoomAmiBT.addActionListener(new java.awt.event.ActionListener() {
+        zoomRickoBT.setBackground(new java.awt.Color(242, 242, 242));
+        zoomRickoBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        zoomRickoBT.setText("ZOOM");
+        zoomRickoBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        zoomRickoBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                zoomAmiBTActionPerformed(evt);
+                zoomRickoBTActionPerformed(evt);
             }
         });
-        add(zoomAmiBT);
-        zoomAmiBT.setBounds(640, 540, 80, 30);
-
-        zoomDesmondBT.setBackground(new java.awt.Color(242, 242, 242));
-        zoomDesmondBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        zoomDesmondBT.setText("ZOOM");
-        zoomDesmondBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
-        zoomDesmondBT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                zoomDesmondBTActionPerformed(evt);
-            }
-        });
-        add(zoomDesmondBT);
-        zoomDesmondBT.setBounds(930, 540, 80, 30);
+        add(zoomRickoBT);
+        zoomRickoBT.setBounds(660, 280, 80, 30);
 
         zoomPoppyBT.setBackground(new java.awt.Color(242, 242, 242));
         zoomPoppyBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -120,42 +101,65 @@ public class fingerprintWine_2 extends javax.swing.JPanel {
             }
         });
         add(zoomPoppyBT);
-        zoomPoppyBT.setBounds(920, 290, 80, 30);
+        zoomPoppyBT.setBounds(940, 280, 80, 30);
 
-        zoomRickoBT.setBackground(new java.awt.Color(242, 242, 242));
-        zoomRickoBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        zoomRickoBT.setText("ZOOM");
-        zoomRickoBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
-        zoomRickoBT.addActionListener(new java.awt.event.ActionListener() {
+        zoomAmiBT.setBackground(new java.awt.Color(242, 242, 242));
+        zoomAmiBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        zoomAmiBT.setText("ZOOM");
+        zoomAmiBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        zoomAmiBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                zoomRickoBTActionPerformed(evt);
+                zoomAmiBTActionPerformed(evt);
             }
         });
-        add(zoomRickoBT);
-        zoomRickoBT.setBounds(650, 290, 80, 30);
+        add(zoomAmiBT);
+        zoomAmiBT.setBounds(660, 540, 80, 30);
+
+        zoomDesmondBT.setBackground(new java.awt.Color(242, 242, 242));
+        zoomDesmondBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        zoomDesmondBT.setText("ZOOM");
+        zoomDesmondBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        zoomDesmondBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                zoomDesmondBTActionPerformed(evt);
+            }
+        });
+        add(zoomDesmondBT);
+        zoomDesmondBT.setBounds(940, 540, 80, 30);
 
         chooseAmi.setBackground(new java.awt.Color(143, 60, 18));
         chooseAmi.setPreferredSize(new java.awt.Dimension(25, 25));
         add(chooseAmi);
-        chooseAmi.setBounds(620, 340, 20, 20);
+        chooseAmi.setBounds(650, 340, 20, 20);
 
         chooseDesmond.setBackground(new java.awt.Color(143, 60, 18));
         chooseDesmond.setPreferredSize(new java.awt.Dimension(25, 25));
         add(chooseDesmond);
-        chooseDesmond.setBounds(850, 340, 20, 20);
+        chooseDesmond.setBounds(870, 340, 20, 20);
 
         choosePoppy.setBackground(new java.awt.Color(143, 60, 18));
         choosePoppy.setPreferredSize(new java.awt.Dimension(25, 25));
         add(choosePoppy);
-        choosePoppy.setBounds(900, 95, 20, 20);
+        choosePoppy.setBounds(920, 70, 20, 20);
 
         chooseRicko.setBackground(new java.awt.Color(143, 60, 18));
         chooseRicko.setPreferredSize(new java.awt.Dimension(25, 25));
         add(chooseRicko);
-        chooseRicko.setBounds(620, 95, 20, 20);
+        chooseRicko.setBounds(640, 70, 20, 20);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fwine2.jpg"))); // NOI18N
-        jLabel1.setPreferredSize(new java.awt.Dimension(1200, 700));
+        finger1BT.setBackground(new java.awt.Color(139, 224, 159));
+        finger1BT.setFont(new java.awt.Font("MiTNThin", 1, 24)); // NOI18N
+        finger1BT.setText("รอยนิ้วมือ");
+        finger1BT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                finger1BTActionPerformed(evt);
+            }
+        });
+        add(finger1BT);
+        finger1BT.setBounds(130, 110, 378, 100);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fplate.jpg"))); // NOI18N
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
@@ -164,25 +168,29 @@ public class fingerprintWine_2 extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_confirmBTActionPerformed
 
+    private void zoomRickoBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomRickoBTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_zoomRickoBTActionPerformed
+
     private void zoomPoppyBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomPoppyBTActionPerformed
 
     }//GEN-LAST:event_zoomPoppyBTActionPerformed
 
-    private void zoomRickoBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomRickoBTActionPerformed
+    private void zoomAmiBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomAmiBTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_zoomRickoBTActionPerformed
+    }//GEN-LAST:event_zoomAmiBTActionPerformed
 
     private void zoomDesmondBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomDesmondBTActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_zoomDesmondBTActionPerformed
 
-    private void zoomAmiBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomAmiBTActionPerformed
+    private void finger1BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finger1BTActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_zoomAmiBTActionPerformed
-   /* testing panel*/
+    }//GEN-LAST:event_finger1BTActionPerformed
+  /* testing panel*/
     public static void main(String[] args){
         JFrame f = new JFrame();
-        f.setContentPane(new fingerprintWine_2());
+        f.setContentPane(new fingerprintPlate());
         f.setSize(1200,700);
         f.setResizable(false);
         f.setLocationRelativeTo(null);
@@ -191,7 +199,6 @@ public class fingerprintWine_2 extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backBT;
     private javax.swing.JCheckBox chooseAmi;
     private javax.swing.JCheckBox chooseDesmond;
     private javax.swing.JCheckBox choosePoppy;
@@ -200,10 +207,9 @@ public class fingerprintWine_2 extends javax.swing.JPanel {
     private javax.swing.JLabel coinLB;
     private javax.swing.JButton confirmBT;
     private javax.swing.JLabel fileLB1;
+    private javax.swing.JToggleButton finger1BT;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel toolLB;
-    private javax.swing.JButton wineBT;
-    private javax.swing.JButton wineBT1;
     private javax.swing.JButton zoomAmiBT;
     private javax.swing.JButton zoomDesmondBT;
     private javax.swing.JButton zoomPoppyBT;

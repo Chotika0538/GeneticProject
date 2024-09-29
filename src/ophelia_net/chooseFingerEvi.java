@@ -43,6 +43,7 @@ public class chooseFingerEvi extends javax.swing.JPanel {
         medbottleLB = new javax.swing.JLabel();
         water = new javax.swing.JLabel();
         wineLB = new javax.swing.JLabel();
+        spoonLB = new javax.swing.JLabel();
         navybg = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -70,7 +71,7 @@ public class chooseFingerEvi extends javax.swing.JPanel {
             }
         });
         add(plateBT);
-        plateBT.setBounds(540, 510, 110, 40);
+        plateBT.setBounds(210, 510, 110, 40);
 
         spoonBT.setBackground(new java.awt.Color(242, 242, 242));
         spoonBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -82,7 +83,7 @@ public class chooseFingerEvi extends javax.swing.JPanel {
             }
         });
         add(spoonBT);
-        spoonBT.setBounds(540, 240, 110, 40);
+        spoonBT.setBounds(530, 510, 110, 40);
 
         potBT.setBackground(new java.awt.Color(242, 242, 242));
         potBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -106,7 +107,7 @@ public class chooseFingerEvi extends javax.swing.JPanel {
             }
         });
         add(waterBT);
-        waterBT.setBounds(220, 510, 110, 40);
+        waterBT.setBounds(540, 240, 110, 40);
 
         boxBT.setBackground(new java.awt.Color(242, 242, 242));
         boxBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -149,17 +150,21 @@ public class chooseFingerEvi extends javax.swing.JPanel {
         plateLB.setBounds(170, 310, 200, 200);
         plateLB.getAccessibleContext().setAccessibleDescription("");
 
-        medbottleLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/medicineBottle.png"))); // NOI18N
+        medbottleLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/medicinebottle.png"))); // NOI18N
         add(medbottleLB);
         medbottleLB.setBounds(840, 300, 200, 200);
 
         water.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/water.png"))); // NOI18N
         add(water);
-        water.setBounds(490, 40, 190, 180);
+        water.setBounds(490, 80, 170, 150);
 
         wineLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/wine.png"))); // NOI18N
         add(wineLB);
         wineLB.setBounds(160, 30, 200, 200);
+
+        spoonLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/spoon.png"))); // NOI18N
+        add(spoonLB);
+        spoonLB.setBounds(510, 320, 200, 200);
 
         navybg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/navybg.jpg"))); // NOI18N
         navybg.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -213,6 +218,7 @@ public class chooseFingerEvi extends javax.swing.JPanel {
     private javax.swing.JLabel plateLB;
     private javax.swing.JButton potBT;
     private javax.swing.JButton spoonBT;
+    private javax.swing.JLabel spoonLB;
     private javax.swing.JLabel toolLB;
     private javax.swing.JLabel water;
     private javax.swing.JButton waterBT;

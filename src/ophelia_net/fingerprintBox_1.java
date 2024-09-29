@@ -10,12 +10,12 @@ import javax.swing.JFrame;
  *
  * @author LENOVO
  */
-public class fingerprintWine_1 extends javax.swing.JPanel {
+public class fingerprintBox_1 extends javax.swing.JPanel {
 
     /**
      * Creates new form fingerprint1_1
      */
-    public fingerprintWine_1() {
+    public fingerprintBox_1() {
         initComponents();
     }
 
@@ -41,6 +41,8 @@ public class fingerprintWine_1 extends javax.swing.JPanel {
         chooseDesmond = new javax.swing.JCheckBox();
         choosePoppy = new javax.swing.JCheckBox();
         chooseRicko = new javax.swing.JCheckBox();
+        finger1BT = new javax.swing.JToggleButton();
+        finger2BT = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -146,6 +148,23 @@ public class fingerprintWine_1 extends javax.swing.JPanel {
         add(chooseRicko);
         chooseRicko.setBounds(620, 95, 20, 20);
 
+        finger1BT.setBackground(new java.awt.Color(139, 224, 159));
+        finger1BT.setFont(new java.awt.Font("MiTNThin", 1, 24)); // NOI18N
+        finger1BT.setText("รอยนิ้วมือที่ 1");
+        finger1BT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                finger1BTActionPerformed(evt);
+            }
+        });
+        add(finger1BT);
+        finger1BT.setBounds(130, 140, 190, 100);
+
+        finger2BT.setBackground(new java.awt.Color(139, 224, 159));
+        finger2BT.setFont(new java.awt.Font("MiTNThin", 1, 24)); // NOI18N
+        finger2BT.setText("รอยนิ้วมือที่ 2");
+        add(finger2BT);
+        finger2BT.setBounds(310, 140, 200, 100);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fwine1.jpg"))); // NOI18N
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);
@@ -170,10 +189,14 @@ public class fingerprintWine_1 extends javax.swing.JPanel {
     private void zoomDesmondBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomDesmondBTActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_zoomDesmondBTActionPerformed
+
+    private void finger1BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finger1BTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_finger1BTActionPerformed
    /* testing panel*/
     public static void main(String[] args){
         JFrame f = new JFrame();
-        f.setContentPane(new fingerprintWine_1());
+        f.setContentPane(new fingerprintBox_1());
         f.setSize(1200,700);
         f.setResizable(false);
         f.setLocationRelativeTo(null);
@@ -189,6 +212,8 @@ public class fingerprintWine_1 extends javax.swing.JPanel {
     private javax.swing.JLabel coin;
     private javax.swing.JLabel coinLB;
     private javax.swing.JLabel fileLB1;
+    private javax.swing.JToggleButton finger1BT;
+    private javax.swing.JToggleButton finger2BT;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton nextBT;
     private javax.swing.JLabel toolLB;
