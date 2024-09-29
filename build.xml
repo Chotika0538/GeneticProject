@@ -9,6 +9,16 @@
 <!-- in the project's Project Properties dialog box.-->
 <project name="Ophelia_netB" default="default" basedir=".">
     <description>Builds, tests, and runs the project Ophelia_netB.</description>
+    <target name="-post-compile">
+    <copy todir="${build.classes.dir}">
+        <fileset dir="src">
+            <!-- คัดลอกทุกไฟล์ที่อยู่ใน resources -->
+            <include name="**/*.png"/>
+            <include name="**/*.jpg"/>
+            <include name="**/*.gif"/>
+        </fileset>
+    </copy>
+</target>
     <import file="nbproject/build-impl.xml"/>
     <!-- คำสั่งที่เพิ่มเข้ามา -->
     <target name="-post-compile">
