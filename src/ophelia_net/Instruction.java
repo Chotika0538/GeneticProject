@@ -48,8 +48,8 @@ public class Instruction extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        inst_2 = new javax.swing.JLabel();
+        inst_1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
 
@@ -66,13 +66,13 @@ public class Instruction extends javax.swing.JPanel {
         jPanel1.add(jButton2);
         jButton2.setBounds(1000, 1190, 130, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/92.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 570, 1200, 700);
+        inst_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Instruct_2.png"))); // NOI18N
+        jPanel1.add(inst_2);
+        inst_2.setBounds(0, 570, 1200, 700);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/91.png"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 1200, 591);
+        inst_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Instruct_1.png"))); // NOI18N
+        jPanel1.add(inst_1);
+        inst_1.setBounds(0, 0, 1200, 591);
 
         jScrollPane1.setViewportView(jPanel1);
 
@@ -88,16 +88,16 @@ public class Instruction extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 155, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel inst_1;
+    private javax.swing.JLabel inst_2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

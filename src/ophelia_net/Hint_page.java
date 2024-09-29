@@ -46,11 +46,11 @@ public class Hint_page extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         Hint_ScrollPanel = new javax.swing.JPanel();
-        DNA_hint = new javax.swing.JLabel();
-        Finger_hint1 = new javax.swing.JLabel();
-        Finger_hint2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        coin = new javax.swing.JLabel();
+        DNA = new javax.swing.JLabel();
+        Finger = new javax.swing.JLabel();
+        Contaminate_1 = new javax.swing.JLabel();
+        Contaminate_2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -63,25 +63,25 @@ public class Hint_page extends javax.swing.JPanel {
         Hint_ScrollPanel.setRequestFocusEnabled(false);
         Hint_ScrollPanel.setLayout(null);
 
-        DNA_hint.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/93.png"))); // NOI18N
-        Hint_ScrollPanel.add(DNA_hint);
-        DNA_hint.setBounds(0, 0, 1200, 700);
+        coin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Guide_1.png"))); // NOI18N
+        Hint_ScrollPanel.add(coin);
+        coin.setBounds(0, 0, 1200, 700);
 
-        Finger_hint1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/94.png"))); // NOI18N
-        Hint_ScrollPanel.add(Finger_hint1);
-        Finger_hint1.setBounds(0, 706, 1200, 566);
+        DNA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Guide_2.png"))); // NOI18N
+        Hint_ScrollPanel.add(DNA);
+        DNA.setBounds(0, 706, 1200, 566);
 
-        Finger_hint2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/95.png"))); // NOI18N
-        Hint_ScrollPanel.add(Finger_hint2);
-        Finger_hint2.setBounds(0, 1278, 1200, 614);
+        Finger.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Guide_3.png"))); // NOI18N
+        Hint_ScrollPanel.add(Finger);
+        Finger.setBounds(0, 1278, 1200, 614);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/96.png"))); // NOI18N
-        Hint_ScrollPanel.add(jLabel1);
-        jLabel1.setBounds(0, 1898, 1200, 700);
+        Contaminate_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Guide_4.png"))); // NOI18N
+        Hint_ScrollPanel.add(Contaminate_1);
+        Contaminate_1.setBounds(0, 1898, 1200, 700);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/97.png"))); // NOI18N
-        Hint_ScrollPanel.add(jLabel2);
-        jLabel2.setBounds(0, 2604, 1200, 700);
+        Contaminate_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Guide_5.png"))); // NOI18N
+        Hint_ScrollPanel.add(Contaminate_2);
+        Contaminate_2.setBounds(0, 2604, 1200, 700);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButton1.setText("Close");
@@ -107,13 +107,13 @@ public class Hint_page extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel DNA_hint;
-    private javax.swing.JLabel Finger_hint1;
-    private javax.swing.JLabel Finger_hint2;
+    private javax.swing.JLabel Contaminate_1;
+    private javax.swing.JLabel Contaminate_2;
+    private javax.swing.JLabel DNA;
+    private javax.swing.JLabel Finger;
     private javax.swing.JPanel Hint_ScrollPanel;
+    private javax.swing.JLabel coin;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

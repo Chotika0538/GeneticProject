@@ -55,8 +55,8 @@ public class True_criminal extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        news_1 = new javax.swing.JLabel();
+        news_2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -68,15 +68,15 @@ public class True_criminal extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(1185, 1300));
         jPanel1.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/140.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(0, 0, 1185, 680);
+        news_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/NewsContent_1.png"))); // NOI18N
+        jPanel1.add(news_1);
+        news_1.setBounds(0, 0, 1185, 680);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/141.png"))); // NOI18N
-        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel2.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 670, 1185, 510);
+        news_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/NewsContent_2.png"))); // NOI18N
+        news_2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        news_2.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        jPanel1.add(news_2);
+        news_2.setBounds(0, 670, 1185, 510);
 
         jButton1.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         jButton1.setText("End");
@@ -104,9 +104,9 @@ public class True_criminal extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel news_1;
+    private javax.swing.JLabel news_2;
     // End of variables declaration//GEN-END:variables
 }
