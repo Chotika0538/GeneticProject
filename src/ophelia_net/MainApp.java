@@ -17,6 +17,8 @@ public class MainApp extends JFrame {
         P2WarningPage warning = new P2WarningPage(mainPanel);
         P3Story story = new P3Story(mainPanel);
         P4Evidence evidence = new P4Evidence(mainPanel);
+        P4_2Timeline timeline = new P4_2Timeline(mainPanel);
+        P4_3informationRicko inforRicko = new P4_3informationRicko(mainPanel);
         P5testimonyBG testbg = new P5testimonyBG(mainPanel);
         P7AmiTestimony amitest = new P7AmiTestimony(mainPanel);
         P8DesmondTestimony desmondtest = new P8DesmondTestimony(mainPanel);
@@ -30,7 +32,9 @@ public class MainApp extends JFrame {
         mainPanel.add(warning, "warning");
         mainPanel.add(story, "story");
         mainPanel.add(evidence ,"evidence");
-       mainPanel.add(testbg, "testbg");
+        mainPanel.add(timeline, "timeline");
+        mainPanel.add(inforRicko, "informationRicko");
+        mainPanel.add(testbg, "testbg");
         mainPanel.add(amitest, "amitest");
         mainPanel.add(desmondtest, "desmondtest");
         mainPanel.add(poppytest, "poppytest");

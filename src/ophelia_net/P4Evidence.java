@@ -69,7 +69,7 @@ public class P4Evidence extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
-         cd.show(mainPanel, "testbg");
+         cd.show(mainPanel, "timeline");
     }//GEN-LAST:event_nextBTActionPerformed
 
     private void backBTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBTMouseClicked

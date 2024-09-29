@@ -5,25 +5,23 @@
 package ophelia_net;
 
 import java.awt.CardLayout;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
  *
- * @author LENOVO
+ * @author Khao
  */
-public class P9PoppyTestimony extends javax.swing.JPanel {
-private CardLayout cd;
+public class P4_2Timeline extends javax.swing.JPanel {
+   private CardLayout cd;
     private JPanel mainPanel;
     /**
      * Creates new form StartPage1
      */
-    public P9PoppyTestimony(JPanel mainPanel) {
+    public P4_2Timeline(JPanel mainPanel) {
         this.mainPanel = mainPanel;
         cd = (CardLayout) mainPanel.getLayout();
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,7 +33,7 @@ private CardLayout cd;
 
         backBT = new javax.swing.JButton();
         nextBT = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
@@ -48,12 +46,9 @@ private CardLayout cd;
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 backBTMouseClicked(evt);
             }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                backBTMouseEntered(evt);
-            }
         });
         add(backBT);
-        backBT.setBounds(110, 600, 100, 40);
+        backBT.setBounds(50, 590, 100, 40);
 
         nextBT.setBackground(new java.awt.Color(242, 242, 242));
         nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -65,42 +60,26 @@ private CardLayout cd;
             }
         });
         add(nextBT);
-        nextBT.setBounds(990, 600, 100, 40);
+        nextBT.setBounds(990, 590, 100, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/28.jpg"))); // NOI18N
-        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        add(jLabel1);
-        jLabel1.setBounds(0, 0, 1200, 700);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/timeline.jpg"))); // NOI18N
+        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(jLabel2);
+        jLabel2.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
-        cd.show(mainPanel, "choosetestbg");
-    }//GEN-LAST:event_nextBTActionPerformed
-
-    private void backBTMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBTMouseEntered
-        // TODO add your handling code here:
-       
-    }//GEN-LAST:event_backBTMouseEntered
-          
     private void backBTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBTMouseClicked
-        // TODO add your handling code here:
-         cd.show(mainPanel, "desmondtest");
+        cd.show(mainPanel, "evidence");
     }//GEN-LAST:event_backBTMouseClicked
-//    /* testing panel*/
-//    public static void main(String[] args){
-//    JFrame f = new JFrame();
-//    f.setContentPane(new P9PoppyTestimony());
-//    f.setSize(1200,700);
-//    f.setResizable(false);
-//    f.setLocationRelativeTo(null);
-//    f.setVisible(true);
-//    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//}
+
+    private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
+        cd.show(mainPanel, "informationRicko");
+    }//GEN-LAST:event_nextBTActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBT;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton nextBT;
     // End of variables declaration//GEN-END:variables
 }
