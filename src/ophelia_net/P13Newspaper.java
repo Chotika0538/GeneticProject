@@ -41,9 +41,9 @@ public class P13Newspaper extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(410, 540, 160, 40);
+        jButton1.setBounds(420, 580, 160, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/newspaper.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/เหตุการณ์ที่เกิดขึ้น (2).jpg"))); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1200, 700);
