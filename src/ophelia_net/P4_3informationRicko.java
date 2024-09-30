@@ -74,7 +74,7 @@ public class P4_3informationRicko extends javax.swing.JPanel {
     }//GEN-LAST:event_backBTMouseClicked
 
     private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
-        cd.show(mainPanel, "testbg");
+        cd.show(mainPanel, "instruction");
     }//GEN-LAST:event_nextBTActionPerformed
 
 
