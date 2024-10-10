@@ -24,7 +24,16 @@ public class P11_1_Medfmed2Wife extends javax.swing.JPanel {
         BACKPAGE=back;
         initComponents();
     }
-
+// private CardLayout cd;
+//    private JPanel mainPanel;
+//    public static String BACKPAGE;
+//    
+//    public P11_1_Medfmed1Wife(JPanel mainPanel , String back) {
+//        this.mainPanel = mainPanel;
+//        cd = (CardLayout) mainPanel.getLayout();
+//        BACKPAGE=back;
+//        initComponents();
+//    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
