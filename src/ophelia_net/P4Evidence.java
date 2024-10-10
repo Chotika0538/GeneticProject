@@ -62,7 +62,7 @@ public class P4Evidence extends javax.swing.JPanel {
         add(nextBT);
         nextBT.setBounds(990, 600, 100, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/evidence.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/evidence_1.png"))); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1200, 700);

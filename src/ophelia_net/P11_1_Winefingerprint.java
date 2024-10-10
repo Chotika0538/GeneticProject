@@ -4,19 +4,34 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
+import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
  * @author LENOVO
  */
 public class P11_1_Winefingerprint extends javax.swing.JPanel {
-
-    /**
-     * Creates new form fingerprintWine
-     */
-    public P11_1_Winefingerprint() {
+    
+    private CardLayout cd;
+    private JPanel mainPanel;
+    public static String BACKPAGE;
+    public static final String ADDRESS = "Wine";
+    private ButtonGroup group;
+    
+    public P11_1_Winefingerprint(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
+        addPage();
+        group = new ButtonGroup();
+        group.add(chooseRicko);
+        group.add(choosePoppy);
+        group.add(chooseDesmond);
+        group.add(chooseAmi);
     }
 
     /**
@@ -41,7 +56,6 @@ public class P11_1_Winefingerprint extends javax.swing.JPanel {
         chooseDesmond = new javax.swing.JCheckBox();
         choosePoppy = new javax.swing.JCheckBox();
         chooseRicko = new javax.swing.JCheckBox();
-        finger1BT = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -157,17 +171,6 @@ public class P11_1_Winefingerprint extends javax.swing.JPanel {
         add(chooseRicko);
         chooseRicko.setBounds(640, 80, 20, 20);
 
-        finger1BT.setBackground(new java.awt.Color(139, 224, 159));
-        finger1BT.setFont(new java.awt.Font("MiTNThin", 1, 24)); // NOI18N
-        finger1BT.setText("รอยนิ้วมือ");
-        finger1BT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                finger1BTActionPerformed(evt);
-            }
-        });
-        add(finger1BT);
-        finger1BT.setBounds(110, 110, 380, 100);
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fwine.jpg"))); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel1);
@@ -175,23 +178,28 @@ public class P11_1_Winefingerprint extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void confirmBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmBTActionPerformed
-        // TODO add your handling code here:
+        if(!chooseAmi.isSelected() && !chooseDesmond.isSelected() && !choosePoppy.isSelected()&& !chooseRicko.isSelected())
+            JOptionPane.showMessageDialog(this, "Please select before comfirm.", "Select", JOptionPane.WARNING_MESSAGE);
+        else{
+            P11_1_1chooseFingerEvi.checked[0]=true;
+            cd.show(mainPanel, "fingerSelected");
+        }
     }//GEN-LAST:event_confirmBTActionPerformed
 
     private void zoomRickoBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomRickoBTActionPerformed
-        // TODO add your handling code here:
+        cd.show(mainPanel, "WineRicko");
     }//GEN-LAST:event_zoomRickoBTActionPerformed
 
     private void zoomPoppyBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomPoppyBTActionPerformed
-
+        cd.show(mainPanel, "WineSister");
     }//GEN-LAST:event_zoomPoppyBTActionPerformed
 
     private void zoomAmiBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomAmiBTActionPerformed
-        // TODO add your handling code here:
+        cd.show(mainPanel, "WineWife");
     }//GEN-LAST:event_zoomAmiBTActionPerformed
 
     private void zoomDesmondBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomDesmondBTActionPerformed
-        // TODO add your handling code here:
+        cd.show(mainPanel, "WineWaiter");
     }//GEN-LAST:event_zoomDesmondBTActionPerformed
 
     private void chooseRickoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseRickoActionPerformed
@@ -201,21 +209,22 @@ public class P11_1_Winefingerprint extends javax.swing.JPanel {
     private void chooseDesmondActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseDesmondActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_chooseDesmondActionPerformed
-
-    private void finger1BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finger1BTActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_finger1BTActionPerformed
   /* testing panel*/
-    public static void main(String[] args){
-        JFrame f = new JFrame();
-        f.setContentPane(new P11_1_Winefingerprint());
-        f.setSize(1200,700);
-        f.setResizable(false);
-        f.setLocationRelativeTo(null);
-        f.setVisible(true);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//    public static void main(String[] args){
+//        JFrame f = new JFrame();
+//        f.setContentPane(new P11_1_Winefingerprint());
+//        f.setSize(1200,700);
+//        f.setResizable(false);
+//        f.setLocationRelativeTo(null);
+//        f.setVisible(true);
+//        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//    }
+    private void addPage(){
+        mainPanel.add(new P11_1_WinefwineRicko(mainPanel,ADDRESS),"WineRicko");
+        mainPanel.add(new P11_1_WinefwineSister(mainPanel,ADDRESS),"WineSister");
+        mainPanel.add(new P11_1_WinefwineWaiter(mainPanel,ADDRESS),"WineWaiter");
+        mainPanel.add(new P11_1_WinefwineWife(mainPanel,ADDRESS),"WineWife");
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox chooseAmi;
     private javax.swing.JCheckBox chooseDesmond;
@@ -225,7 +234,6 @@ public class P11_1_Winefingerprint extends javax.swing.JPanel {
     private javax.swing.JLabel coinLB;
     private javax.swing.JButton confirmBT;
     private javax.swing.JLabel fileLB1;
-    private javax.swing.JToggleButton finger1BT;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel toolLB;
     private javax.swing.JButton zoomAmiBT;

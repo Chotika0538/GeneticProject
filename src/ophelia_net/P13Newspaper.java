@@ -4,16 +4,21 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Khao
  */
 public class P13Newspaper extends javax.swing.JPanel {
 
-    /**
-     * Creates new form P13Newspaper
-     */
-    public P13Newspaper() {
+    private CardLayout cd;
+    private JPanel mainPanel;
+    
+    public P13Newspaper(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
     }
 
@@ -32,7 +37,8 @@ public class P13Newspaper extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
 
-        jButton1.setFont(new java.awt.Font("MiTNThin", 0, 18)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(255, 204, 204));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton1.setText("อ่านรายละเอียดคดี");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), null, null));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -50,7 +56,7 @@ public class P13Newspaper extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        cd.show(mainPanel, "Newspaper_detail");
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

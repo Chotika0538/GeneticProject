@@ -5,6 +5,7 @@
 package ophelia_net;
 
 import java.awt.CardLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -80,6 +81,7 @@ public class P8DesmondTestimony extends javax.swing.JPanel {
     }//GEN-LAST:event_nextBTActionPerformed
 
     private void nextBTMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextBTMouseClicked
+        testimonyPageLookBack.addImage(new ImageIcon(getClass().getResource("/ophelia_net/30.jpg")).getImage());  // Static call to add the image 
         cd.show(mainPanel, "poppytest");
     }//GEN-LAST:event_nextBTMouseClicked
 

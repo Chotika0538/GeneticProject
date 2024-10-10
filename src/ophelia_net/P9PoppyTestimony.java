@@ -5,6 +5,7 @@
 package ophelia_net;
 
 import java.awt.CardLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -74,6 +75,7 @@ private CardLayout cd;
     }// </editor-fold>//GEN-END:initComponents
 
     private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
+        testimonyPageLookBack.addImage(new ImageIcon(getClass().getResource("/ophelia_net/28.jpg")).getImage());  // Static call to add the image 
         cd.show(mainPanel, "choosetestbg");
     }//GEN-LAST:event_nextBTActionPerformed
 

@@ -4,7 +4,11 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
+import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -12,13 +16,23 @@ import javax.swing.JFrame;
  */
 public class P11_1_Waterfingerprint extends javax.swing.JPanel {
 
-    /**
-     * Creates new form fingerprintWater
-     */
-    public P11_1_Waterfingerprint() {
+    private CardLayout cd;
+    private JPanel mainPanel;
+    public static String BACKPAGE;
+    public static final String ADDRESS = "Water";
+    private ButtonGroup group;
+    
+    public P11_1_Waterfingerprint(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
+        addPage();
+        group = new ButtonGroup();
+        group.add(chooseRicko);
+        group.add(choosePoppy);
+        group.add(chooseDesmond);
+        group.add(chooseAmi);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -116,11 +130,6 @@ public class P11_1_Waterfingerprint extends javax.swing.JPanel {
 
         chooseAmi.setBackground(new java.awt.Color(143, 60, 18));
         chooseAmi.setPreferredSize(new java.awt.Dimension(25, 25));
-        chooseAmi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chooseAmiActionPerformed(evt);
-            }
-        });
         add(chooseAmi);
         chooseAmi.setBounds(640, 340, 20, 20);
 
@@ -158,40 +167,46 @@ public class P11_1_Waterfingerprint extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void zoomRickoBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomRickoBTActionPerformed
-        // TODO add your handling code here:
+        cd.show(mainPanel, "WaterRicko");
     }//GEN-LAST:event_zoomRickoBTActionPerformed
 
     private void zoomPoppyBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomPoppyBTActionPerformed
-
+        cd.show(mainPanel, "WaterSister");
     }//GEN-LAST:event_zoomPoppyBTActionPerformed
 
     private void zoomAmiBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomAmiBTActionPerformed
-        // TODO add your handling code here:
+        cd.show(mainPanel, "WaterWife");
     }//GEN-LAST:event_zoomAmiBTActionPerformed
 
     private void zoomDesmondBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomDesmondBTActionPerformed
-        // TODO add your handling code here:
+        cd.show(mainPanel, "WaterWaiter");
     }//GEN-LAST:event_zoomDesmondBTActionPerformed
 
-    private void chooseAmiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseAmiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chooseAmiActionPerformed
-
     private void confirmBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmBTActionPerformed
-        // TODO add your handling code here:
+        if(!chooseAmi.isSelected() && !chooseDesmond.isSelected() && !choosePoppy.isSelected()&& !chooseRicko.isSelected())
+            JOptionPane.showMessageDialog(this, "Please select before comfirm.", "Select", JOptionPane.WARNING_MESSAGE);
+        else{
+            P11_1_1chooseFingerEvi.checked[4]=true;
+            cd.show(mainPanel, "fingerSelected");
+        }
     }//GEN-LAST:event_confirmBTActionPerformed
   /* testing panel*/
-    public static void main(String[] args){
-        JFrame f = new JFrame();
-        f.setContentPane(new P11_1_Waterfingerprint());
-        f.setSize(1200,700);
-        f.setResizable(false);
-        f.setLocationRelativeTo(null);
-        f.setVisible(true);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//    public static void main(String[] args){
+//        JFrame f = new JFrame();
+//        f.setContentPane(new P11_1_Waterfingerprint());
+//        f.setSize(1200,700);
+//        f.setResizable(false);
+//        f.setLocationRelativeTo(null);
+//        f.setVisible(true);
+//        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//    }
+
+    private void addPage(){
+        mainPanel.add(new P11_1_WaterfwaterRicko(mainPanel,ADDRESS),"WaterRicko");
+        mainPanel.add(new P11_1_WaterfwaterSister(mainPanel,ADDRESS),"WaterSister");
+        mainPanel.add(new P11_1_WaterfwaterWaiter(mainPanel,ADDRESS),"WaterWaiter");
+        mainPanel.add(new P11_1_WaterfwaterWife(mainPanel,ADDRESS),"WaterWife");
     }
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox chooseAmi;
     private javax.swing.JCheckBox chooseDesmond;

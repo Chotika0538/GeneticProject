@@ -4,18 +4,24 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
  * @author LENOVO
  */
 public class P11_2_1dna extends javax.swing.JPanel {
-
-    /**
+    private CardLayout cd;
+    private JPanel mainPanel;
+  
+        /**
      * Creates new form dna
      */
-    public P11_2_1dna() {
+    public P11_2_1dna(JPanel mainPanel) { 
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
     }
 
@@ -61,10 +67,20 @@ public class P11_2_1dna extends javax.swing.JPanel {
         coinLB.setBounds(1100, 20, 63, 63);
 
         fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
+        fileLB1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fileLB1MouseClicked(evt);
+            }
+        });
         add(fileLB1);
         fileLB1.setBounds(1040, 20, 70, 70);
 
         toolLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
+        toolLB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                toolLBMouseClicked(evt);
+            }
+        });
         add(toolLB);
         toolLB.setBounds(980, 10, 70, 80);
 
@@ -76,21 +92,24 @@ public class P11_2_1dna extends javax.swing.JPanel {
 
     private void adjustBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adjustBTActionPerformed
         // TODO add your handling code here:
+        cd.show(mainPanel,"adjust");
     }//GEN-LAST:event_adjustBTActionPerformed
-    /* testing panel*/
-    public static void main(String[] args){
-    JFrame f = new JFrame();
-    f.setContentPane(new P11_2_1dna());
-    f.setSize(1200,700);
-    f.setResizable(false);
-    f.setLocationRelativeTo(null);
-    f.setVisible(true);
-    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-}
 
+    private void fileLB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fileLB1MouseClicked
+        // TODO add your handling code here:
+        P_Menu_icon.backPage="dnaSelected";
+        cd.show(mainPanel,"menuBtn");
+    }//GEN-LAST:event_fileLB1MouseClicked
+
+    private void toolLBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toolLBMouseClicked
+        // TODO add your handling code here:
+        P_Hint_page.backPage="dnaSelected";
+        cd.show(mainPanel, "toolPage");
+    }//GEN-LAST:event_toolLBMouseClicked
+    /* testing panel*/
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton adjustBT;
-    private javax.swing.JLabel coin;
+    static javax.swing.JLabel coin;
     private javax.swing.JLabel coinLB;
     private javax.swing.JLabel fileLB1;
     private javax.swing.JLabel jLabel7;

@@ -4,18 +4,27 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
+import java.awt.Color;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
  * @author LENOVO
  */
 public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
-
-    /**
-     * Creates new form chooseFingerEvi
-     */
-    public P11_1_1chooseFingerEvi() {
+    public static boolean[] checked = {false,false,false,false,false,false,false};
+    // index : 
+    //   0  : wine   , 1 : spoon , 2 : chocolate , 3 : liquor , 4 : water , 5 : plate ,  6 : pot
+    private CardLayout cd;
+    private JPanel mainPanel;
+    public static final String ADDRESS ="fingerSelected";
+    public static String BACKPAGE;
+    public P11_1_1chooseFingerEvi(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
     }
 
@@ -28,6 +37,7 @@ public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        nextBT = new javax.swing.JButton();
         liquorBT = new javax.swing.JButton();
         plateBT = new javax.swing.JButton();
         spoonBT = new javax.swing.JButton();
@@ -46,11 +56,22 @@ public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
         spoonLB = new javax.swing.JLabel();
         wineBT1 = new javax.swing.JButton();
         wineLB1 = new javax.swing.JLabel();
-        backBT = new javax.swing.JButton();
         navybg = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
+
+        nextBT.setBackground(new java.awt.Color(242, 242, 242));
+        nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        nextBT.setText("Next>");
+        nextBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        nextBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextBTActionPerformed(evt);
+            }
+        });
+        add(nextBT);
+        nextBT.setBounds(1010, 620, 110, 40);
 
         liquorBT.setBackground(new java.awt.Color(242, 242, 242));
         liquorBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -137,10 +158,20 @@ public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
         coinLB.setBounds(1100, 20, 63, 63);
 
         toolLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
+        toolLB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                toolLBMouseClicked(evt);
+            }
+        });
         add(toolLB);
         toolLB.setBounds(980, 10, 70, 80);
 
         fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
+        fileLB1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fileLB1MouseClicked(evt);
+            }
+        });
         add(fileLB1);
         fileLB1.setBounds(1040, 20, 70, 70);
 
@@ -185,68 +216,132 @@ public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
         add(wineLB1);
         wineLB1.setBounds(170, 40, 200, 200);
 
-        backBT.setBackground(new java.awt.Color(242, 242, 242));
-        backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
-        backBT.setText("< Back");
-        backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
-        add(backBT);
-        backBT.setBounds(100, 590, 100, 40);
-
         navybg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/navybg.jpg"))); // NOI18N
         navybg.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(navybg);
-        navybg.setBounds(10, -10, 1200, 700);
+        navybg.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void liquorBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_liquorBTActionPerformed
+    private void toolLBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toolLBMouseClicked
+        // TODO add your handling code here:
+        P_Hint_page.backPage=ADDRESS;
+        cd.show(mainPanel,"toolPage");
+    }//GEN-LAST:event_toolLBMouseClicked
 
-    }//GEN-LAST:event_liquorBTActionPerformed
+    private void fileLB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fileLB1MouseClicked
+        // TODO add your handling code here:
+        P_Menu_icon.backPage=ADDRESS;
+        cd.show(mainPanel,"menuBtn");
+    }//GEN-LAST:event_fileLB1MouseClicked
 
-    private void plateBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plateBTActionPerformed
-
-    }//GEN-LAST:event_plateBTActionPerformed
-
-    private void spoonBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spoonBTActionPerformed
-
-    }//GEN-LAST:event_spoonBTActionPerformed
-
-    private void potBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potBTActionPerformed
-
-    }//GEN-LAST:event_potBTActionPerformed
-
-    private void waterBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_waterBTActionPerformed
-
-    }//GEN-LAST:event_waterBTActionPerformed
-
-    private void boxBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxBTActionPerformed
-
-    }//GEN-LAST:event_boxBTActionPerformed
+    private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
+        // TODO add your handling code here:
+        if(checkVisit()){
+//            backBT.setEnabled(true);
+//            backBT.setVisible(true);
+            testimonyPageLookBack.fingerSelBtn.setEnabled(true);
+            nextBT.setEnabled(false);
+            nextBT.setVisible(false);
+            cd.show(mainPanel,"selectWaytoCheck");
+        }else{
+            JOptionPane.showMessageDialog(this, "You have to check all object", "check", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_nextBTActionPerformed
 
     private void wineBT1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wineBT1ActionPerformed
-        // TODO add your handling code here:
+        if(!checked[0]){
+            cd.show(mainPanel,"Wine");
+            wineBT1.setBackground(Color.green);
+            wineBT1.setText("Checked");
+        }
+        else 
+            JOptionPane.showMessageDialog(this, "You have already checked this object", "checked", JOptionPane.INFORMATION_MESSAGE);
+        
+            
     }//GEN-LAST:event_wineBT1ActionPerformed
-   /* testing panel*/
-    public static void main(String[] args){
-        JFrame f = new JFrame();
-        f.setContentPane(new P11_1_1chooseFingerEvi());
-        f.setSize(1200,700);
-        f.setResizable(false);
-        f.setLocationRelativeTo(null);
-        f.setVisible(true);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    private void spoonBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spoonBTActionPerformed
+        if(!checked[1]){
+            cd.show(mainPanel,"Spoon1");
+            spoonBT.setBackground(Color.green);
+            spoonBT.setText("Checked");
+        }
+        else 
+            JOptionPane.showMessageDialog(this, "You have already checked this object", "checked", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_spoonBTActionPerformed
+
+    private void boxBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxBTActionPerformed
+        if(!checked[2]){
+            cd.show(mainPanel,"BOX1");
+            boxBT.setBackground(Color.green);
+            boxBT.setText("Checked");
+        }
+        else JOptionPane.showMessageDialog(this, "You have already checked this object", "checked", JOptionPane.INFORMATION_MESSAGE);
+    
+    }//GEN-LAST:event_boxBTActionPerformed
+
+    private void liquorBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_liquorBTActionPerformed
+        if(!checked[3]){
+            cd.show(mainPanel,"Liquor");
+            liquorBT.setBackground(Color.green);
+            liquorBT.setText("Checked");
+        }
+        else JOptionPane.showMessageDialog(this, "You have already checked this object", "checked", JOptionPane.INFORMATION_MESSAGE);
+    
+    }//GEN-LAST:event_liquorBTActionPerformed
+
+    private void waterBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_waterBTActionPerformed
+        if(!checked[4]){
+            cd.show(mainPanel,"Water");
+            waterBT.setBackground(Color.green);
+            waterBT.setText("Checked");
+        }
+            
+        else JOptionPane.showMessageDialog(this, "You have already checked this object", "checked", JOptionPane.INFORMATION_MESSAGE);
+    
+    }//GEN-LAST:event_waterBTActionPerformed
+
+    private void plateBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plateBTActionPerformed
+        if(!checked[5]){
+            cd.show(mainPanel,"Plate");
+            plateBT.setBackground(Color.green);
+            plateBT.setText("Checked");
+        }
+        else JOptionPane.showMessageDialog(this, "You have already checked this object", "checked", JOptionPane.INFORMATION_MESSAGE);
+    
+    }//GEN-LAST:event_plateBTActionPerformed
+
+    private void potBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_potBTActionPerformed
+        if(!checked[6]){
+            cd.show(mainPanel,"MedF1");
+            potBT.setBackground(Color.green);
+            potBT.setText("Checked");
+        }
+        else JOptionPane.showMessageDialog(this, "You have already checked this object", "checked", JOptionPane.INFORMATION_MESSAGE);
+    
+    }//GEN-LAST:event_potBTActionPerformed
+    
+    //check that every evidence is done
+    private boolean checkVisit(){
+        for(boolean  i : checked){
+            if(i==false){
+                return false;
+            }
+        }
+        return true;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backBT;
     private javax.swing.JButton boxBT;
     private javax.swing.JLabel boxLB;
-    private javax.swing.JLabel coin;
+    static javax.swing.JLabel coin;
     private javax.swing.JLabel coinLB;
     private javax.swing.JLabel fileLB1;
     private javax.swing.JButton liquorBT;
     private javax.swing.JLabel liquorLB;
     private javax.swing.JLabel medbottleLB;
     private javax.swing.JLabel navybg;
+    private javax.swing.JButton nextBT;
     private javax.swing.JButton plateBT;
     private javax.swing.JLabel plateLB;
     private javax.swing.JButton potBT;

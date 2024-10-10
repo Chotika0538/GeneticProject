@@ -11,7 +11,9 @@ import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.FlatPropertiesLaf;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
+import java.awt.CardLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.UIManager;
 
 /**
@@ -20,29 +22,30 @@ import javax.swing.UIManager;
  */
 public class True_criminal extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Instruction
-     */
-    public True_criminal() {
+     private CardLayout cd;
+    private JPanel mainPanel;
+    
+    public True_criminal(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
-        
     }
-    public static void main(String[] args) {
-//        try{
-//            UIManager.setLookAndFeel( new FlatMacLightLaf());
-//        }
-//        catch(Exception e){
-//            System.err.println( "Failed to initialize LaF" );
-//        }
-        JFrame jFrame = new JFrame();
-        jFrame.setContentPane(new True_criminal());
-        
-        jFrame.setVisible(true);
-        jFrame.setSize(1200, 700);
-        jFrame.setLocationRelativeTo(null);
-        jFrame.setResizable(false);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
+//    public static void main(String[] args) {
+////        try{
+////            UIManager.setLookAndFeel( new FlatMacLightLaf());
+////        }
+////        catch(Exception e){
+////            System.err.println( "Failed to initialize LaF" );
+////        }
+//        JFrame jFrame = new JFrame();
+//        jFrame.setContentPane(new True_criminal());
+//        
+//        jFrame.setVisible(true);
+//        jFrame.setSize(1200, 700);
+//        jFrame.setLocationRelativeTo(null);
+//        jFrame.setResizable(false);
+//        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.

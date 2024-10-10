@@ -13,8 +13,9 @@ import javax.swing.JPanel;
  * @author Chotika
  */
 public class P4_4Instruction extends javax.swing.JPanel {
-   private CardLayout cd;
+    private CardLayout cd;
     private JPanel mainPanel;
+    private static final String ADDRESS="instruction";
     /**
      * Creates new form StartPage1
      */
@@ -52,34 +53,110 @@ public class P4_4Instruction extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         backBT = new javax.swing.JButton();
+        jLabel_coin = new javax.swing.JLabel();
+        jLabel_file = new javax.swing.JLabel();
+        jLabel_tool = new javax.swing.JLabel();
+        toolLB = new javax.swing.JLabel();
+        fileLB1 = new javax.swing.JLabel();
+        coin = new javax.swing.JLabel();
+        coinLB = new javax.swing.JLabel();
         nextBT = new javax.swing.JButton();
         inst_2 = new javax.swing.JLabel();
         inst_1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
 
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
         jPanel1.setBackground(new java.awt.Color(47, 46, 62));
         jPanel1.setPreferredSize(new java.awt.Dimension(1185, 1300));
         jPanel1.setLayout(null);
 
+        backBT.setFont(new java.awt.Font("TH Sarabun New", 1, 36)); // NOI18N
         backBT.setText("Back");
         backBT.setToolTipText("");
+        backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
         backBT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 backBTMouseClicked(evt);
             }
         });
+        backBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBTActionPerformed(evt);
+            }
+        });
         jPanel1.add(backBT);
-        backBT.setBounds(90, 1200, 140, 60);
+        backBT.setBounds(90, 1210, 120, 50);
 
+        jLabel_coin.setFont(new java.awt.Font("TH Sarabun New", 1, 20)); // NOI18N
+        jLabel_coin.setForeground(new java.awt.Color(255, 202, 40));
+        jLabel_coin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_coin.setText("เหรียญ");
+        jPanel1.add(jLabel_coin);
+        jLabel_coin.setBounds(1080, 60, 60, 25);
+
+        jLabel_file.setFont(new java.awt.Font("TH Sarabun New", 1, 20)); // NOI18N
+        jLabel_file.setForeground(new java.awt.Color(201, 156, 99));
+        jLabel_file.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_file.setText("บันทึกคดี");
+        jPanel1.add(jLabel_file);
+        jLabel_file.setBounds(1010, 60, 70, 25);
+
+        jLabel_tool.setFont(new java.awt.Font("TH Sarabun New", 1, 20)); // NOI18N
+        jLabel_tool.setForeground(new java.awt.Color(117, 180, 129));
+        jLabel_tool.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel_tool.setText("คู่มือ");
+        jPanel1.add(jLabel_tool);
+        jLabel_tool.setBounds(950, 60, 60, 25);
+
+        toolLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        toolLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
+        toolLB.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        toolLB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                toolLBMouseClicked(evt);
+            }
+        });
+        jPanel1.add(toolLB);
+        toolLB.setBounds(950, 10, 60, 50);
+
+        fileLB1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
+        fileLB1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fileLB1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(fileLB1);
+        fileLB1.setBounds(1010, 10, 80, 50);
+
+        coin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
+        coin.setFont(new java.awt.Font("Leelawadee", 1, 20)); // NOI18N
+        coin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        coin.setText(" 3 ");
+        coin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel1.add(coin);
+        coin.setBounds(1090, 0, 40, 60);
+
+        coinLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png"))); // NOI18N
+        coinLB.setAlignmentY(0.0F);
+        coinLB.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(coinLB);
+        coinLB.setBounds(1080, 10, 60, 50);
+
+        nextBT.setFont(new java.awt.Font("TH Sarabun New", 1, 36)); // NOI18N
         nextBT.setText("Next");
+        nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
         nextBT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 nextBTMouseClicked(evt);
             }
         });
         jPanel1.add(nextBT);
-        nextBT.setBounds(1000, 1190, 130, 60);
+        nextBT.setBounds(980, 1210, 120, 50);
 
         inst_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Instruct_2.png"))); // NOI18N
         jPanel1.add(inst_2);
@@ -117,13 +194,36 @@ public class P4_4Instruction extends javax.swing.JPanel {
         cd.show(mainPanel, "testbg");
     }//GEN-LAST:event_nextBTMouseClicked
 
+    private void backBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backBTActionPerformed
+
+    private void toolLBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toolLBMouseClicked
+        // TODO add your handling code here:
+        P_Hint_page.backPage=ADDRESS;
+        cd.show(mainPanel,"toolPage");
+    }//GEN-LAST:event_toolLBMouseClicked
+
+    private void fileLB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fileLB1MouseClicked
+        // TODO add your handling code here:
+        P_Menu_icon.backPage=ADDRESS;
+        cd.show(mainPanel,"menuBtn");
+    }//GEN-LAST:event_fileLB1MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBT;
+    static javax.swing.JLabel coin;
+    private javax.swing.JLabel coinLB;
+    private javax.swing.JLabel fileLB1;
     private javax.swing.JLabel inst_1;
     private javax.swing.JLabel inst_2;
+    private javax.swing.JLabel jLabel_coin;
+    private javax.swing.JLabel jLabel_file;
+    private javax.swing.JLabel jLabel_tool;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton nextBT;
+    private javax.swing.JLabel toolLB;
     // End of variables declaration//GEN-END:variables
 }

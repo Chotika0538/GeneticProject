@@ -34,9 +34,6 @@ public class P10_2chooseT2 extends javax.swing.JPanel {
     private void initComponents() {
 
         nextBT = new javax.swing.JButton();
-        fileLB = new javax.swing.JLabel();
-        coin = new javax.swing.JLabel();
-        coinLB = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -45,7 +42,7 @@ public class P10_2chooseT2 extends javax.swing.JPanel {
         nextBT.setBackground(new java.awt.Color(242, 242, 242));
         nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         nextBT.setText("< Back");
-        nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
+        nextBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         nextBT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 nextBTMouseClicked(evt);
@@ -53,20 +50,6 @@ public class P10_2chooseT2 extends javax.swing.JPanel {
         });
         add(nextBT);
         nextBT.setBounds(130, 590, 100, 40);
-
-        fileLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
-        add(fileLB);
-        fileLB.setBounds(1000, 20, 70, 70);
-
-        coin.setFont(new java.awt.Font("Leelawadee", 1, 20)); // NOI18N
-        coin.setText("   3");
-        coin.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        add(coin);
-        coin.setBounds(1100, 40, 50, 20);
-
-        coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png"))); // NOI18N
-        add(coinLB);
-        coinLB.setBounds(1090, 20, 60, 60);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/t2.jpg"))); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -90,9 +73,6 @@ public class P10_2chooseT2 extends javax.swing.JPanel {
 //}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel coin;
-    private javax.swing.JLabel coinLB;
-    private javax.swing.JLabel fileLB;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton nextBT;
     // End of variables declaration//GEN-END:variables

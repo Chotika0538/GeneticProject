@@ -4,19 +4,36 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
+import javax.swing.ButtonGroup;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
  * @author LENOVO
  */
 public class P11_1_Liquorfingerprint extends javax.swing.JPanel {
-
+    private CardLayout cd;
+    private JPanel mainPanel;
+    public static String BACKPAGE;
+    public static final String ADDRESS = "Liquor";
+    private ButtonGroup group;
     /**
      * Creates new form fingerprint
      */
-    public P11_1_Liquorfingerprint() {
+    public P11_1_Liquorfingerprint(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
         initComponents();
+        addPage();
+        group = new ButtonGroup();
+        group.add(chooseRicko);
+        group.add(choosePoppy);
+        group.add(chooseDesmond);
+        group.add(chooseAmi);
     }
 
     /**
@@ -139,58 +156,68 @@ public class P11_1_Liquorfingerprint extends javax.swing.JPanel {
         chooseDesmond.setBackground(new java.awt.Color(143, 60, 18));
         chooseDesmond.setPreferredSize(new java.awt.Dimension(25, 25));
         add(chooseDesmond);
-        chooseDesmond.setBounds(850, 340, 20, 20);
+        chooseDesmond.setBounds(860, 340, 20, 20);
 
         choosePoppy.setBackground(new java.awt.Color(143, 60, 18));
         choosePoppy.setPreferredSize(new java.awt.Dimension(25, 25));
         add(choosePoppy);
-        choosePoppy.setBounds(910, 80, 20, 20);
+        choosePoppy.setBounds(920, 90, 20, 20);
 
         chooseRicko.setBackground(new java.awt.Color(143, 60, 18));
         chooseRicko.setPreferredSize(new java.awt.Dimension(25, 25));
         add(chooseRicko);
-        chooseRicko.setBounds(630, 80, 20, 20);
+        chooseRicko.setBounds(630, 90, 20, 20);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fliqour.jpg"))); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void confirmBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmBTActionPerformed
-        // TODO add your handling code here:
+        if(!chooseAmi.isSelected() && !chooseDesmond.isSelected() && !choosePoppy.isSelected()&& !chooseRicko.isSelected())
+            JOptionPane.showMessageDialog(this, "Please select before comfirm.", "Select", JOptionPane.WARNING_MESSAGE);
+        else{
+            P11_1_1chooseFingerEvi.checked[3]=true;
+            cd.show(mainPanel, "fingerSelected");
+        }
     }//GEN-LAST:event_confirmBTActionPerformed
 
     private void zoomRickoBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomRickoBTActionPerformed
-        // TODO add your handling code here:
+        cd.show(mainPanel, "LiquorRicko");
     }//GEN-LAST:event_zoomRickoBTActionPerformed
 
     private void zoomPoppyBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomPoppyBTActionPerformed
-
+        cd.show(mainPanel, "LiquorSister");
     }//GEN-LAST:event_zoomPoppyBTActionPerformed
 
     private void zoomAmiBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomAmiBTActionPerformed
-        // TODO add your handling code here:
+        cd.show(mainPanel, "LiquorWife");
     }//GEN-LAST:event_zoomAmiBTActionPerformed
 
     private void zoomDesmondBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zoomDesmondBTActionPerformed
-        // TODO add your handling code here:
+        cd.show(mainPanel, "LiquorWaiter");
     }//GEN-LAST:event_zoomDesmondBTActionPerformed
 
     private void chooseAmiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseAmiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_chooseAmiActionPerformed
   /* testing panel*/
-    public static void main(String[] args){
-        JFrame f = new JFrame();
-        f.setContentPane(new P11_1_Liquorfingerprint());
-        f.setSize(1200,700);
-        f.setResizable(false);
-        f.setLocationRelativeTo(null);
-        f.setVisible(true);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//    public static void main(String[] args){
+//        JFrame f = new JFrame();
+//        f.setContentPane(new P11_1_Liquorfingerprint());
+//        f.setSize(1200,700);
+//        f.setResizable(false);
+//        f.setLocationRelativeTo(null);
+//        f.setVisible(true);
+//        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//    }
+    private void addPage(){
+        mainPanel.add(new P11_1_LiquorfliqRicko(mainPanel,ADDRESS),"LiquorRicko");
+        mainPanel.add(new P11_1_LiquorfliqSister(mainPanel,ADDRESS),"LiquorSister");
+        mainPanel.add(new P11_1_LiquorfliqWaiter(mainPanel,ADDRESS),"LiquorWaiter");
+        mainPanel.add(new P11_1_LiquorfliqWife(mainPanel,ADDRESS),"LiquorWife");
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox chooseAmi;
     private javax.swing.JCheckBox chooseDesmond;

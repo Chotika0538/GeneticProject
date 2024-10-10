@@ -48,7 +48,7 @@ public class P4_2Timeline extends javax.swing.JPanel {
             }
         });
         add(backBT);
-        backBT.setBounds(50, 590, 100, 40);
+        backBT.setBounds(110, 600, 100, 40);
 
         nextBT.setBackground(new java.awt.Color(242, 242, 242));
         nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -60,9 +60,9 @@ public class P4_2Timeline extends javax.swing.JPanel {
             }
         });
         add(nextBT);
-        nextBT.setBounds(990, 590, 100, 40);
+        nextBT.setBounds(990, 600, 100, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/timeline.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/timeline (2).png"))); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1200, 700);

@@ -4,7 +4,9 @@
  */
 package ophelia_net;
 
+import java.awt.CardLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -12,10 +14,14 @@ import javax.swing.JFrame;
  */
 public class P11_1_Medfmed2Ricko extends javax.swing.JPanel {
 
-    /**
-     * Creates new form fmed2Ricko
-     */
-    public P11_1_Medfmed2Ricko() {
+    private CardLayout cd;
+    private JPanel mainPanel;
+    public static String BACKPAGE;
+    
+    public P11_1_Medfmed2Ricko(JPanel mainPanel , String back) {
+        this.mainPanel = mainPanel;
+        cd = (CardLayout) mainPanel.getLayout();
+        BACKPAGE=back;
         initComponents();
     }
 
@@ -40,17 +46,17 @@ public class P11_1_Medfmed2Ricko extends javax.swing.JPanel {
         backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         backBT.setText("< Back");
         backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
+        backBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBTActionPerformed(evt);
+            }
+        });
         add(backBT);
         backBT.setBounds(120, 580, 110, 40);
 
         finger1BT.setBackground(new java.awt.Color(139, 224, 159));
         finger1BT.setFont(new java.awt.Font("MiTNThin", 1, 24)); // NOI18N
         finger1BT.setText("รอยนิ้วมือที่ 1");
-        finger1BT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                finger1BTActionPerformed(evt);
-            }
-        });
         add(finger1BT);
         finger1BT.setBounds(120, 130, 190, 110);
 
@@ -58,6 +64,11 @@ public class P11_1_Medfmed2Ricko extends javax.swing.JPanel {
         finger2BT.setFont(new java.awt.Font("MiTNThin", 1, 24)); // NOI18N
         finger2BT.setForeground(new java.awt.Color(255, 255, 255));
         finger2BT.setText("รอยนิ้วมือที่ 2");
+        finger2BT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                finger2BTActionPerformed(evt);
+            }
+        });
         add(finger2BT);
         finger2BT.setBounds(310, 130, 200, 110);
 
@@ -66,19 +77,23 @@ public class P11_1_Medfmed2Ricko extends javax.swing.JPanel {
         jLabel1.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void finger1BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finger1BTActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_finger1BTActionPerformed
+    private void backBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTActionPerformed
+        cd.show(mainPanel,BACKPAGE);
+    }//GEN-LAST:event_backBTActionPerformed
+
+    private void finger2BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finger2BTActionPerformed
+        finger2BT.setSelected(false);
+    }//GEN-LAST:event_finger2BTActionPerformed
  /* testing panel*/
-    public static void main(String[] args){
-        JFrame f = new JFrame();
-        f.setContentPane(new P11_1_Medfmed2Ricko());
-        f.setSize(1200,700);
-        f.setResizable(false);
-        f.setLocationRelativeTo(null);
-        f.setVisible(true);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
+//    public static void main(String[] args){
+//        JFrame f = new JFrame();
+//        f.setContentPane(new P11_1_Medfmed2Ricko());
+//        f.setSize(1200,700);
+//        f.setResizable(false);
+//        f.setLocationRelativeTo(null);
+//        f.setVisible(true);
+//        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBT;
