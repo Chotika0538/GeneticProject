@@ -5,20 +5,19 @@
 package ophelia_net;
 
 import java.awt.CardLayout;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
  *
- * @author LENOVO
+ * @author Chotika
  */
-public class P11_1_Medfmed1Waiter extends javax.swing.JPanel {
+public class P11_1_Medfmed1Wife_new extends javax.swing.JPanel {
 
     private CardLayout cd;
     private JPanel mainPanel;
     public static String BACKPAGE;
     
-    public P11_1_Medfmed1Waiter(JPanel mainPanel , String back) {
+    public P11_1_Medfmed1Wife_new(JPanel mainPanel , String back) {
         this.mainPanel = mainPanel;
         cd = (CardLayout) mainPanel.getLayout();
         BACKPAGE=back;
@@ -38,7 +37,6 @@ public class P11_1_Medfmed1Waiter extends javax.swing.JPanel {
         finger2LB = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
 
         backBT.setBackground(new java.awt.Color(242, 242, 242));
@@ -61,7 +59,7 @@ public class P11_1_Medfmed1Waiter extends javax.swing.JPanel {
         add(finger2LB);
         finger2LB.setBounds(320, 120, 180, 90);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fmed1Waiter.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fmed1Wife.jpg"))); // NOI18N
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
@@ -71,18 +69,9 @@ public class P11_1_Medfmed1Waiter extends javax.swing.JPanel {
     }//GEN-LAST:event_backBTActionPerformed
 
     private void finger2LBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finger2LBMouseClicked
-//        cd.show(mainPanel, "Med2Waiter");
+        //        cd.show(mainPanel, "Med2Waiter");
     }//GEN-LAST:event_finger2LBMouseClicked
- /* testing panel*/
-//    public static void main(String[] args){
-//        JFrame f = new JFrame();
-//        f.setContentPane(new P11_1_Medfmed1Waiter());
-//        f.setSize(1200,700);
-//        f.setResizable(false);
-//        f.setLocationRelativeTo(null);
-//        f.setVisible(true);
-//        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBT;

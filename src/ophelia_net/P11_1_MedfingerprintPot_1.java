@@ -221,7 +221,7 @@ public class P11_1_MedfingerprintPot_1 extends javax.swing.JPanel {
         mainPanel.add(new P11_1_Medfmed1Ricko(mainPanel,ADDRESS),"Med1Ricko");
         mainPanel.add(new P11_1_Medfmed1Sister(mainPanel,ADDRESS),"Med1Sister");
         mainPanel.add(new P11_1_Medfmed1Waiter(mainPanel,ADDRESS),"Med1Waiter");
-        mainPanel.add(new P11_1_Medfmed1Wife(mainPanel,ADDRESS),"Med1Wife");
+        mainPanel.add(new P11_1_Medfmed1Wife_new(mainPanel,ADDRESS),"Med1Wife");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
