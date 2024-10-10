@@ -35,8 +35,7 @@ public class P11_1_Medfmed1Ricko extends javax.swing.JPanel {
     private void initComponents() {
 
         backBT = new javax.swing.JButton();
-        finger1BT = new javax.swing.JToggleButton();
-        finger2BT = new javax.swing.JToggleButton();
+        finger2LB = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -54,34 +53,26 @@ public class P11_1_Medfmed1Ricko extends javax.swing.JPanel {
         add(backBT);
         backBT.setBounds(120, 580, 110, 40);
 
-        finger1BT.setBackground(new java.awt.Color(70, 135, 86));
-        finger1BT.setFont(new java.awt.Font("MiTNThin", 1, 24)); // NOI18N
-        finger1BT.setForeground(new java.awt.Color(255, 255, 255));
-        finger1BT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                finger1BTActionPerformed(evt);
+        finger2LB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                finger2LBMouseClicked(evt);
             }
         });
-        add(finger1BT);
-        finger1BT.setBounds(120, 110, 190, 110);
-
-        finger2BT.setBackground(new java.awt.Color(139, 224, 159));
-        finger2BT.setFont(new java.awt.Font("MiTNThin", 1, 24)); // NOI18N
-        add(finger2BT);
-        finger2BT.setBounds(310, 110, 200, 110);
+        add(finger2LB);
+        finger2LB.setBounds(320, 120, 180, 90);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fmed1Ricko.jpg"))); // NOI18N
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void finger1BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finger1BTActionPerformed
-        finger1BT.setSelected(false);
-    }//GEN-LAST:event_finger1BTActionPerformed
-
     private void backBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTActionPerformed
         cd.show(mainPanel,BACKPAGE);
     }//GEN-LAST:event_backBTActionPerformed
+
+    private void finger2LBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finger2LBMouseClicked
+//        cd.show(mainPanel, "Med2Ricko");
+    }//GEN-LAST:event_finger2LBMouseClicked
   /* testing panel*/
 //    public static void main(String[] args){
 //        JFrame f = new JFrame();
@@ -95,8 +86,7 @@ public class P11_1_Medfmed1Ricko extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBT;
-    private javax.swing.JToggleButton finger1BT;
-    private javax.swing.JToggleButton finger2BT;
+    private javax.swing.JLabel finger2LB;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -52,7 +52,7 @@ public class P11_1_WinefwineWaiter extends javax.swing.JPanel {
         add(backBT);
         backBT.setBounds(120, 580, 110, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fliqourWaiter.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fwineWaiter.jpg"))); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);

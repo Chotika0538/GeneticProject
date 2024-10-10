@@ -49,41 +49,13 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JToggleButton" name="finger1BT">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="56" green="87" red="46" type="rgb"/>
-        </Property>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="MiTNThin" size="24" style="1"/>
-        </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="&#xe23;&#xe2d;&#xe22;&#xe19;&#xe34;&#xe49;&#xe27;&#xe21;&#xe37;&#xe2d;&#xe17;&#xe35;&#xe48; 1"/>
-      </Properties>
+    <Component class="javax.swing.JLabel" name="finger2LB">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="finger1BTActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="finger2LBMouseClicked"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="120" y="110" width="190" height="110"/>
-        </Constraint>
-      </Constraints>
-    </Component>
-    <Component class="javax.swing.JToggleButton" name="finger2BT">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="9f" green="e0" red="8b" type="rgb"/>
-        </Property>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="MiTNThin" size="24" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="&#xe23;&#xe2d;&#xe22;&#xe19;&#xe34;&#xe49;&#xe27;&#xe21;&#xe37;&#xe2d;&#xe17;&#xe35;&#xe48; 2"/>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="310" y="110" width="200" height="110"/>
+          <AbsoluteConstraints x="320" y="120" width="180" height="90"/>
         </Constraint>
       </Constraints>
     </Component>

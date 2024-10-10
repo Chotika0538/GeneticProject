@@ -36,8 +36,7 @@ public class P11_1_Medfmed2Waiter extends javax.swing.JPanel {
     private void initComponents() {
 
         backBT = new javax.swing.JButton();
-        finger1BT = new javax.swing.JToggleButton();
-        finger2BT = new javax.swing.JToggleButton();
+        finger1LB = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -55,23 +54,13 @@ public class P11_1_Medfmed2Waiter extends javax.swing.JPanel {
         add(backBT);
         backBT.setBounds(120, 580, 110, 40);
 
-        finger1BT.setBackground(new java.awt.Color(139, 224, 159));
-        finger1BT.setFont(new java.awt.Font("MiTNThin", 1, 24)); // NOI18N
-        finger1BT.setText("รอยนิ้วมือที่ 1");
-        add(finger1BT);
-        finger1BT.setBounds(120, 130, 190, 110);
-
-        finger2BT.setBackground(new java.awt.Color(70, 135, 86));
-        finger2BT.setFont(new java.awt.Font("MiTNThin", 1, 24)); // NOI18N
-        finger2BT.setForeground(new java.awt.Color(255, 255, 255));
-        finger2BT.setText("รอยนิ้วมือที่ 2");
-        finger2BT.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                finger2BTActionPerformed(evt);
+        finger1LB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                finger1LBMouseClicked(evt);
             }
         });
-        add(finger2BT);
-        finger2BT.setBounds(310, 130, 200, 110);
+        add(finger1LB);
+        finger1LB.setBounds(130, 140, 180, 90);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fmed2Waiter.jpg"))); // NOI18N
         add(jLabel1);
@@ -82,9 +71,9 @@ public class P11_1_Medfmed2Waiter extends javax.swing.JPanel {
         cd.show(mainPanel,BACKPAGE);
     }//GEN-LAST:event_backBTActionPerformed
 
-    private void finger2BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finger2BTActionPerformed
-        finger2BT.setSelected(false);
-    }//GEN-LAST:event_finger2BTActionPerformed
+    private void finger1LBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finger1LBMouseClicked
+//        cd.show(mainPanel, "Med1Waiter");
+    }//GEN-LAST:event_finger1LBMouseClicked
  /* testing panel*/
 //    public static void main(String[] args){
 //        JFrame f = new JFrame();
@@ -98,8 +87,7 @@ public class P11_1_Medfmed2Waiter extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBT;
-    private javax.swing.JToggleButton finger1BT;
-    private javax.swing.JToggleButton finger2BT;
+    private javax.swing.JLabel finger1LB;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
