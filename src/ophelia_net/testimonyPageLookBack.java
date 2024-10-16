@@ -62,12 +62,12 @@ public class testimonyPageLookBack extends javax.swing.JPanel {
         scrollPane = new JScrollPane(imagePanel);
 
         //Tab - Analize DNA
-        dnaSelBtn = new JButton("DNA"); // Create a new button
+        dnaSelBtn = new JButton("<html>DNA</html>"); // Create a new button
         dnaSelBtn.setBackground(Color.black);
         dnaSelBtn.setForeground(Color.WHITE);
         dnaSelBtn.setFont(new Font("Arial", Font.BOLD, 15));
         dnaSelBtn.setFocusPainted(false); // Remove focus border
-        dnaSelBtn.setBounds(1070, 150, 100, 50); // Set bounds for the yellow button
+        dnaSelBtn.setBounds(1060, 150, 130, 50); // Set bounds for the yellow button
         dnaSelBtn.setEnabled(false);
         dnaSelBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -77,12 +77,12 @@ public class testimonyPageLookBack extends javax.swing.JPanel {
         add(dnaSelBtn);
         
         //Tab - Analize Finferprint
-        fingerSelBtn = new JButton("Finger"); // Create a new button
+        fingerSelBtn = new JButton("<html>Finger<br>print</html>"); // Create a new button
         fingerSelBtn.setBackground(Color.black);
         fingerSelBtn.setForeground(Color.WHITE);
         fingerSelBtn.setFont(new Font("Arial", Font.BOLD, 15));
         fingerSelBtn.setFocusPainted(false); // Remove focus border
-        fingerSelBtn.setBounds(1070, 220, 100, 50); // Set bounds for the yellow button
+        fingerSelBtn.setBounds(1060, 220, 130, 50); // Set bounds for the yellow button
         fingerSelBtn.setEnabled(false);
         fingerSelBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
@@ -92,12 +92,12 @@ public class testimonyPageLookBack extends javax.swing.JPanel {
         add(fingerSelBtn);
         
         //Tab - Analize Food 
-        foodSelBtn = new JButton("Food"); // Create a new button
+        foodSelBtn = new JButton("<html>Contaminated<br>food</html>"); // Create a new button
         foodSelBtn.setBackground(Color.black);
         foodSelBtn.setForeground(Color.WHITE);
         foodSelBtn.setFont(new Font("Arial", Font.BOLD, 15));
         foodSelBtn.setFocusPainted(false); // Remove focus border
-        foodSelBtn.setBounds(1070, 290, 100, 50); // Set bounds for the yellow button
+        foodSelBtn.setBounds(1060, 290, 130, 50); // Set bounds for the yellow button
         foodSelBtn.setEnabled(false);//change to "true" when finish food identification(choose Matk)
         //when click tab
         foodSelBtn.addActionListener(new ActionListener() {
