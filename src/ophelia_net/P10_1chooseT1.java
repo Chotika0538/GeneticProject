@@ -42,7 +42,7 @@ public class P10_1chooseT1 extends javax.swing.JPanel {
         backBT.setBackground(new java.awt.Color(242, 242, 242));
         backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         backBT.setText("< Back");
-        backBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
         backBT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 backBTMouseClicked(evt);

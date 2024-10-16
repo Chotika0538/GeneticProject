@@ -48,6 +48,7 @@ public class P11_1_Boxfingerprint_2 extends javax.swing.JPanel {
         choosePoppy = new javax.swing.JCheckBox();
         chooseRicko = new javax.swing.JCheckBox();
         confirmBT = new javax.swing.JButton();
+        backBt = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -169,7 +170,21 @@ public class P11_1_Boxfingerprint_2 extends javax.swing.JPanel {
             }
         });
         add(confirmBT);
-        confirmBT.setBounds(1060, 620, 100, 40);
+        confirmBT.setBounds(1030, 630, 100, 40);
+
+        backBt.setBackground(new java.awt.Color(242, 242, 242));
+        backBt.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        backBt.setText("<Back");
+        backBt.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
+        backBt.setVisible(false);
+        backBt.setEnabled(false);
+        backBt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtActionPerformed(evt);
+            }
+        });
+        add(backBt);
+        backBt.setBounds(50, 630, 100, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fwine2.jpg")));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fBox2_base.png"))); // NOI18N
@@ -196,18 +211,6 @@ public class P11_1_Boxfingerprint_2 extends javax.swing.JPanel {
         cd.show(mainPanel,"box2Waiter");
     }//GEN-LAST:event_zoomDesmondBTActionPerformed
 
-    private void fileLB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fileLB1MouseClicked
-        // file icon
-        P_Menu_icon.backPage=ADDRESS;
-        cd.show(mainPanel,"menuBtn");
-    }//GEN-LAST:event_fileLB1MouseClicked
-
-    private void toolLBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toolLBMouseClicked
-        // tool icon
-        P_Hint_page.backPage=ADDRESS;
-        cd.show(mainPanel,"toolPage");
-    }//GEN-LAST:event_toolLBMouseClicked
-
     private void confirmBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmBTActionPerformed
         // TODO add your handling code here:
         if(!chooseAmi.isSelected() && !chooseDesmond.isSelected() && !choosePoppy.isSelected()&& !chooseRicko.isSelected())
@@ -222,6 +225,23 @@ public class P11_1_Boxfingerprint_2 extends javax.swing.JPanel {
         cd.show(mainPanel, "BOX1");
     }//GEN-LAST:event_finger1JLMouseClicked
 
+    private void backBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtActionPerformed
+        // TODO add your handling code here:
+       cd.show(mainPanel,"fingerSelected");
+    }//GEN-LAST:event_backBtActionPerformed
+
+    private void fileLB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fileLB1MouseClicked
+        // file icon
+        P_Menu_icon.backPage=ADDRESS;
+        cd.show(mainPanel,"menuBtn");
+    }//GEN-LAST:event_fileLB1MouseClicked
+
+    private void toolLBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toolLBMouseClicked
+        // tool icon
+        P_Hint_page.backPage=ADDRESS;
+        cd.show(mainPanel,"toolPage");
+    }//GEN-LAST:event_toolLBMouseClicked
+
     private void addPage(){
         mainPanel.add(new P11_1_Boxfbox2Ricko(mainPanel,ADDRESS),"box2Ricko");
         mainPanel.add(new P11_1_Boxfbox2Sister(mainPanel,ADDRESS),"box2Sister");
@@ -229,17 +249,18 @@ public class P11_1_Boxfingerprint_2 extends javax.swing.JPanel {
         mainPanel.add(new P11_1_Boxfbox2Wife(mainPanel,ADDRESS),"box2Wife");
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    static javax.swing.JButton backBt;
     private javax.swing.JCheckBox chooseAmi;
     private javax.swing.JCheckBox chooseDesmond;
     private javax.swing.JCheckBox choosePoppy;
     private javax.swing.JCheckBox chooseRicko;
     static javax.swing.JLabel coin;
-    private javax.swing.JLabel coinLB;
-    private javax.swing.JButton confirmBT;
-    private javax.swing.JLabel fileLB1;
+    static javax.swing.JLabel coinLB;
+    static javax.swing.JButton confirmBT;
+    static javax.swing.JLabel fileLB1;
     private javax.swing.JLabel finger1JL;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel toolLB;
+    static javax.swing.JLabel toolLB;
     private javax.swing.JButton zoomAmiBT;
     private javax.swing.JButton zoomDesmondBT;
     private javax.swing.JButton zoomPoppyBT;

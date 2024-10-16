@@ -56,6 +56,7 @@ public class P12ChooseSuspect extends javax.swing.JPanel {
         add(backBT);
         backBT.setBounds(10, 600, 130, 50);
 
+        choosePoppyBT.setBackground(new java.awt.Color(242, 242, 242));
         choosePoppyBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         choosePoppyBT.setText("CHOOSE");
         choosePoppyBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 255, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
@@ -67,6 +68,7 @@ public class P12ChooseSuspect extends javax.swing.JPanel {
         add(choosePoppyBT);
         choosePoppyBT.setBounds(540, 540, 110, 40);
 
+        chooseDesmondBT.setBackground(new java.awt.Color(242, 242, 242));
         chooseDesmondBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         chooseDesmondBT.setText("CHOOSE");
         chooseDesmondBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 255, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
@@ -78,6 +80,7 @@ public class P12ChooseSuspect extends javax.swing.JPanel {
         add(chooseDesmondBT);
         chooseDesmondBT.setBounds(900, 540, 110, 40);
 
+        chooseAmiBT.setBackground(new java.awt.Color(242, 242, 242));
         chooseAmiBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         chooseAmiBT.setText("CHOOSE");
         chooseAmiBT.setBorder(new javax.swing.border.MatteBorder(null));
@@ -96,7 +99,7 @@ public class P12ChooseSuspect extends javax.swing.JPanel {
             }
         });
         add(fileLB);
-        fileLB.setBounds(1020, 10, 70, 70);
+        fileLB.setBounds(1000, 20, 70, 70);
 
         coin.setFont(new java.awt.Font("Leelawadee", 1, 20)); // NOI18N
         coin.setText("   3");
@@ -155,9 +158,9 @@ public class P12ChooseSuspect extends javax.swing.JPanel {
                 else if(choosePoppyBT.isSelected()){
                     cd.show(mainPanel, "Newspaper");
                 }
-                //P11_1_1chooseFingerEvi.checked[4]=true;
+                
             
-            
+           
             }
             //Choose No option
             else{
@@ -177,7 +180,7 @@ public class P12ChooseSuspect extends javax.swing.JPanel {
     private javax.swing.JToggleButton chooseAmiBT;
     private javax.swing.JToggleButton chooseDesmondBT;
     private javax.swing.JToggleButton choosePoppyBT;
-    private javax.swing.JLabel coin;
+    static javax.swing.JLabel coin;
     private javax.swing.JLabel coinLB;
     private javax.swing.JButton comfirmJB;
     private javax.swing.JLabel fileLB;

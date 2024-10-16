@@ -47,6 +47,7 @@ public class P11_1_Boxfingerprint_1 extends javax.swing.JPanel {
         chooseDesmond = new javax.swing.JCheckBox();
         choosePoppy = new javax.swing.JCheckBox();
         chooseRicko = new javax.swing.JCheckBox();
+        backBt = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -158,6 +159,20 @@ public class P11_1_Boxfingerprint_1 extends javax.swing.JPanel {
         add(chooseRicko);
         chooseRicko.setBounds(680, 120, 20, 20);
 
+        backBt.setBackground(new java.awt.Color(242, 242, 242));
+        backBt.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        backBt.setText("<Back");
+        backBt.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
+        backBt.setVisible(false);
+        backBt.setEnabled(false);
+        backBt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtActionPerformed(evt);
+            }
+        });
+        add(backBt);
+        backBt.setBounds(50, 630, 100, 40);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fBox1_base.png"))); // NOI18N
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);
@@ -202,6 +217,11 @@ public class P11_1_Boxfingerprint_1 extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_finger2JLMouseClicked
 
+    private void backBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtActionPerformed
+        // TODO add your handling code here:
+       cd.show(mainPanel,"fingerSelected");
+    }//GEN-LAST:event_backBtActionPerformed
+
     private void addPage(){
         mainPanel.add(new P11_1_Boxfbox1Ricko(mainPanel,ADDRESS),"box1Ricko");
         mainPanel.add(new P11_1_Boxfbox1Sister(mainPanel,ADDRESS),"box1Sister");
@@ -209,16 +229,17 @@ public class P11_1_Boxfingerprint_1 extends javax.swing.JPanel {
         mainPanel.add(new P11_1_Boxfbox1Wife(mainPanel,ADDRESS),"box1Wife");
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    static javax.swing.JButton backBt;
     private javax.swing.JCheckBox chooseAmi;
     private javax.swing.JCheckBox chooseDesmond;
     private javax.swing.JCheckBox choosePoppy;
     private javax.swing.JCheckBox chooseRicko;
     static javax.swing.JLabel coin;
-    private javax.swing.JLabel coinLB;
-    private javax.swing.JLabel fileLB1;
+    static javax.swing.JLabel coinLB;
+    static javax.swing.JLabel fileLB1;
     private javax.swing.JLabel finger2JL;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel toolLB;
+    static javax.swing.JLabel toolLB;
     private javax.swing.JButton zoomAmiBT;
     private javax.swing.JButton zoomDesmondBT;
     private javax.swing.JButton zoomPoppyBT;

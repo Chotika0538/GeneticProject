@@ -36,7 +36,7 @@ public class P_Hint_page extends javax.swing.JPanel {
         Finger = new javax.swing.JLabel();
         Contaminate_1 = new javax.swing.JLabel();
         Contaminate_2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        closeBT = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
@@ -68,17 +68,19 @@ public class P_Hint_page extends javax.swing.JPanel {
         Hint_ScrollPanel.add(Contaminate_2);
         Contaminate_2.setBounds(0, 2604, 1200, 700);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButton1.setText("Close");
-        jButton1.setPreferredSize(new java.awt.Dimension(70, 32));
-        jButton1.setRequestFocusEnabled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        closeBT.setBackground(new java.awt.Color(242, 242, 242));
+        closeBT.setFont(new java.awt.Font("Bodoni MT", 1, 24)); // NOI18N
+        closeBT.setText("Close");
+        closeBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
+        closeBT.setPreferredSize(new java.awt.Dimension(70, 32));
+        closeBT.setRequestFocusEnabled(false);
+        closeBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                closeBTActionPerformed(evt);
             }
         });
-        Hint_ScrollPanel.add(jButton1);
-        jButton1.setBounds(479, 3322, 187, 56);
+        Hint_ScrollPanel.add(closeBT);
+        closeBT.setBounds(479, 3322, 120, 56);
 
         jScrollPane1.setViewportView(Hint_ScrollPanel);
 
@@ -86,10 +88,10 @@ public class P_Hint_page extends javax.swing.JPanel {
         jScrollPane1.setBounds(0, 0, 1185, 700);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void closeBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeBTActionPerformed
         // TODO add your handling code here:
         cd.show(mainPanel,backPage);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_closeBTActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -98,8 +100,8 @@ public class P_Hint_page extends javax.swing.JPanel {
     private javax.swing.JLabel DNA;
     private javax.swing.JLabel Finger;
     private javax.swing.JPanel Hint_ScrollPanel;
+    private javax.swing.JButton closeBT;
     private javax.swing.JLabel coin;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

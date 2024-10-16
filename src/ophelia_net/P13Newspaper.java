@@ -37,8 +37,8 @@ public class P13Newspaper extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 204));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(242, 242, 242));
+        jButton1.setFont(new java.awt.Font("TH Sarabun New", 0, 24)); // NOI18N
         jButton1.setText("อ่านรายละเอียดคดี");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0), null, null));
         jButton1.addActionListener(new java.awt.event.ActionListener() {

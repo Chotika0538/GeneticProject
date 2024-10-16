@@ -51,8 +51,10 @@ public class P11_3_2format extends javax.swing.JPanel {
 
         setLayout(null);
 
-        searchBT.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        searchBT.setBackground(new java.awt.Color(242, 242, 242));
+        searchBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         searchBT.setText("Search>");
+        searchBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
         searchBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchBTActionPerformed(evt);
@@ -88,7 +90,7 @@ public class P11_3_2format extends javax.swing.JPanel {
         coin.setText(" 3 ");
         coin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(coin);
-        coin.setBounds(1120, 0, 40, 60);
+        coin.setBounds(1110, 0, 40, 60);
 
         coinLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png"))); // NOI18N

@@ -7,9 +7,9 @@ package ophelia_net;
 import java.awt.CardLayout;
 import java.awt.Color;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 /**
  *
  * @author LENOVO
@@ -56,6 +56,7 @@ public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
         spoonLB = new javax.swing.JLabel();
         wineBT1 = new javax.swing.JButton();
         wineLB1 = new javax.swing.JLabel();
+        backBT = new javax.swing.JButton();
         navybg = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -71,7 +72,7 @@ public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
             }
         });
         add(nextBT);
-        nextBT.setBounds(1010, 620, 110, 40);
+        nextBT.setBounds(1000, 620, 110, 40);
 
         liquorBT.setBackground(new java.awt.Color(242, 242, 242));
         liquorBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -216,6 +217,20 @@ public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
         add(wineLB1);
         wineLB1.setBounds(170, 40, 200, 200);
 
+        backBT.setBackground(new java.awt.Color(242, 242, 242));
+        backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        backBT.setText("<BACK");
+        backBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255), new java.awt.Color(0, 0, 0), new java.awt.Color(0, 0, 0)));
+        backBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBTActionPerformed(evt);
+            }
+        });
+        backBT.setVisible(false);
+        backBT.setEnabled(false);
+        add(backBT);
+        backBT.setBounds(80, 620, 110, 40);
+
         navybg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/navybg.jpg"))); // NOI18N
         navybg.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(navybg);
@@ -237,17 +252,76 @@ public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
     private void nextBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBTActionPerformed
         // TODO add your handling code here:
         if(checkVisit()){
-//            backBT.setEnabled(true);
-//            backBT.setVisible(true);
             testimonyPageLookBack.fingerSelBtn.setEnabled(true);
             nextBT.setEnabled(false);
             nextBT.setVisible(false);
+            for(int i = 0 ; i<checked.length ; i++){
+                checked[i] = false;  
+                System.out.print("TSET : "+i);
+            }
+            
+            backBT.setVisible(true);
+            backBT.setEnabled(true);
+            
+            setBackbtn(P11_1_Boxfingerprint_2.backBt,P11_1_Boxfingerprint_2.fileLB1,P11_1_Boxfingerprint_2.toolLB,P11_1_Boxfingerprint_2.coin,P11_1_Boxfingerprint_2.coinLB);
+            setBackbtn(P11_1_Boxfingerprint_1.backBt,P11_1_Boxfingerprint_1.fileLB1,P11_1_Boxfingerprint_1.toolLB,P11_1_Boxfingerprint_1.coin,P11_1_Boxfingerprint_1.coinLB);
+            removeConfirmbtn(P11_1_Boxfingerprint_2.confirmBT);
+            
+            setBackbtn(P11_1_Liquorfingerprint.backBt,P11_1_Liquorfingerprint.fileLB1,P11_1_Liquorfingerprint.toolLB,P11_1_Liquorfingerprint.coin,P11_1_Liquorfingerprint.coinLB);
+            removeConfirmbtn(P11_1_Liquorfingerprint.confirmBT);
+            
+            setBackbtn(P11_1_MedfingerprintPot_1.backBt,P11_1_MedfingerprintPot_1.fileLB1,P11_1_MedfingerprintPot_1.toolLB,P11_1_MedfingerprintPot_1.coin,P11_1_MedfingerprintPot_1.coinLB);
+            setBackbtn(P11_1_MedfingerprintPot_2.backBt,P11_1_MedfingerprintPot_2.fileLB1,P11_1_MedfingerprintPot_2.toolLB,P11_1_MedfingerprintPot_2.coin,P11_1_MedfingerprintPot_2.coinLB);
+            removeConfirmbtn(P11_1_MedfingerprintPot_2.confirmBT);
+            
+            setBackbtn(P11_1_PlatefingerprintPlate.backBt,P11_1_PlatefingerprintPlate.fileLB1,P11_1_PlatefingerprintPlate.toolLB,P11_1_PlatefingerprintPlate.coin,P11_1_PlatefingerprintPlate.coinLB); 
+            removeConfirmbtn(P11_1_PlatefingerprintPlate.confirmBT);
+            
+            setBackbtn(P11_1_Spoonfingerprint_1.backBt,P11_1_Spoonfingerprint_1.fileLB1,P11_1_Spoonfingerprint_1.toolLB,P11_1_Spoonfingerprint_1.coin,P11_1_Spoonfingerprint_1.coinLB);
+            setBackbtn(P11_1_Spoonfingerprint_2.backBt,P11_1_Spoonfingerprint_2.fileLB1,P11_1_Spoonfingerprint_2.toolLB,P11_1_Spoonfingerprint_2.coin,P11_1_Spoonfingerprint_2.coinLB);
+            removeConfirmbtn(P11_1_Spoonfingerprint_2.confirmBT);
+            
+            setBackbtn(P11_1_Waterfingerprint.backBt,P11_1_Waterfingerprint.fileLB1,P11_1_Waterfingerprint.toolLB,P11_1_Waterfingerprint.coin,P11_1_Waterfingerprint.coinLB);
+            removeConfirmbtn(P11_1_Waterfingerprint.confirmBT);
+            
+            setBackbtn(P11_1_Winefingerprint.backBt,P11_1_Winefingerprint.fileLB1,P11_1_Winefingerprint.toolLB,P11_1_Winefingerprint.coin,P11_1_Winefingerprint.coinLB);
+            removeConfirmbtn(P11_1_Winefingerprint.confirmBT);
+
             cd.show(mainPanel,"selectWaytoCheck");
+            
+            setBackbtn(null,fileLB1,toolLB,coin,coinLB);
+
         }else{
             JOptionPane.showMessageDialog(this, "You have to check all object", "check", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_nextBTActionPerformed
-
+    private void setBackbtn(JButton b,JLabel l1,JLabel l2,JLabel l3,JLabel l4){
+        if(b!=null){
+            b.setVisible(true);
+            b.setEnabled(true);
+        }
+        try{
+            l1.setVisible(false);
+            l1.setEnabled(false);
+        }catch(Exception e ){System.out.println(e);}
+        try{
+            l2.setVisible(false);
+            l2.setEnabled(false);
+        }catch(Exception e){System.out.println(e);}
+        try{
+            l3.setVisible(false);
+            l3.setEnabled(false);
+        }catch(Exception e){System.out.println(e);}
+        try{
+            l4.setVisible(false);
+            l4.setEnabled(false);
+        }catch(Exception e){System.out.println(e);}
+        
+    }
+    private void removeConfirmbtn(JButton b){
+        b.setVisible(false);
+        b.setEnabled(false);
+    }
     private void wineBT1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wineBT1ActionPerformed
         if(!checked[0]){
             cd.show(mainPanel,"Wine");
@@ -320,6 +394,11 @@ public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
         else JOptionPane.showMessageDialog(this, "You have already checked this object", "checked", JOptionPane.INFORMATION_MESSAGE);
     
     }//GEN-LAST:event_potBTActionPerformed
+
+    private void backBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBTActionPerformed
+        // TODO add your handling code here:
+        cd.show(mainPanel,"testimonyPageLookBack");
+    }//GEN-LAST:event_backBTActionPerformed
     
     //check that every evidence is done
     private boolean checkVisit(){
@@ -332,11 +411,12 @@ public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backBT;
     private javax.swing.JButton boxBT;
     private javax.swing.JLabel boxLB;
     static javax.swing.JLabel coin;
-    private javax.swing.JLabel coinLB;
-    private javax.swing.JLabel fileLB1;
+    static javax.swing.JLabel coinLB;
+    static javax.swing.JLabel fileLB1;
     private javax.swing.JButton liquorBT;
     private javax.swing.JLabel liquorLB;
     private javax.swing.JLabel medbottleLB;
@@ -347,7 +427,7 @@ public class P11_1_1chooseFingerEvi extends javax.swing.JPanel {
     private javax.swing.JButton potBT;
     private javax.swing.JButton spoonBT;
     private javax.swing.JLabel spoonLB;
-    private javax.swing.JLabel toolLB;
+    static javax.swing.JLabel toolLB;
     private javax.swing.JLabel water;
     private javax.swing.JButton waterBT;
     private javax.swing.JButton wineBT1;

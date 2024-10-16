@@ -34,84 +34,178 @@ public class Choose_WrongSuspect extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        restart = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        dooChalery = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 204, 204));
+        setBackground(new java.awt.Color(0, 0, 51));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("TH Sarabun New", 1, 48)); // NOI18N
-        jLabel1.setText("เลือกผิดจ้าาาาาา ว้ายยยยยผิดๆๆ บอกแล้วเวลาเล่นให้อ่านคู่มือ");
+        jLabel1.setFont(new java.awt.Font("MiTNThin", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("ว๊าย ว๊าย ว๊ายยย เลือกผิด แน่จริงก็จับให้ได้สิ๊");
         add(jLabel1);
-        jLabel1.setBounds(250, 90, 890, 94);
+        jLabel1.setBounds(210, 140, 770, 80);
 
         jPanel1.setLayout(null);
 
-        jLabel3.setFont(new java.awt.Font("TH Sarabun New", 1, 36)); // NOI18N
-        jLabel3.setText("่คุณต้องการดำเนินการอย่างไรต่อ?");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(70, 20, 370, 39);
+        restart.setBackground(new java.awt.Color(119, 218, 183));
+        restart.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                restartMouseClicked(evt);
+            }
+        });
 
-        jLabel2.setFont(new java.awt.Font("TH Sarabun New", 1, 36)); // NOI18N
-        jLabel2.setText("ดูเฉลย");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(200, 200, 70, 39);
-
-        jPanel2.setBackground(new java.awt.Color(255, 153, 153));
-
-        jLabel4.setFont(new java.awt.Font("TH Sarabun New", 1, 36)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("MiTNThin", 1, 36)); // NOI18N
         jLabel4.setText("เริ่มเล่นใหม่");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+        javax.swing.GroupLayout restartLayout = new javax.swing.GroupLayout(restart);
+        restart.setLayout(restartLayout);
+        restartLayout.setHorizontalGroup(
+            restartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(restartLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel4)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 11, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(160, 100, 150, 50);
-
-        jPanel3.setBackground(new java.awt.Color(204, 204, 255));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 130, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+        restartLayout.setVerticalGroup(
+            restartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, restartLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel1.add(jPanel3);
-        jPanel3.setBounds(170, 190, 130, 60);
+        jPanel1.add(restart);
+        restart.setBounds(210, 100, 200, 60);
+
+        dooChalery.setBackground(new java.awt.Color(234, 131, 140));
+        dooChalery.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dooChaleryMouseClicked(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("MiTNThin", 1, 36)); // NOI18N
+        jLabel2.setText("ดูเฉลย");
+
+        javax.swing.GroupLayout dooChaleryLayout = new javax.swing.GroupLayout(dooChalery);
+        dooChalery.setLayout(dooChaleryLayout);
+        dooChaleryLayout.setHorizontalGroup(
+            dooChaleryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dooChaleryLayout.createSequentialGroup()
+                .addContainerGap(36, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(34, 34, 34))
+        );
+        dooChaleryLayout.setVerticalGroup(
+            dooChaleryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dooChaleryLayout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(dooChalery);
+        dooChalery.setBounds(230, 190, 160, 60);
+
+        jLabel3.setFont(new java.awt.Font("MiTNThin", 1, 36)); // NOI18N
+        jLabel3.setText("่คุณต้องการดำเนินการอย่างไรต่อ?");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(90, 20, 460, 70);
 
         add(jPanel1);
-        jPanel1.setBounds(430, 230, 480, 290);
+        jPanel1.setBounds(280, 250, 630, 290);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void restartMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_restartMouseClicked
+        // TODO add your handling code here:
+        MainApp.coins=3;
+        P1StartPage start = new P1StartPage(mainPanel);
+        P2WarningPage warning = new P2WarningPage(mainPanel);
+        P3Story story = new P3Story(mainPanel);
+        P4Evidence evidence = new P4Evidence(mainPanel);
+        P4_2Timeline timeline = new P4_2Timeline(mainPanel);
+        P4_3informationRicko inforRicko = new P4_3informationRicko(mainPanel);
+        P4_4Instruction instruction = new P4_4Instruction(mainPanel);
+        P5testimonyBG testbg = new P5testimonyBG(mainPanel);
+        P7AmiTestimony amitest = new P7AmiTestimony(mainPanel);
+        P8DesmondTestimony desmondtest = new P8DesmondTestimony(mainPanel);
+        P9PoppyTestimony poppytest = new P9PoppyTestimony(mainPanel);
+        P10chooseTestimony choosetestbg = new P10chooseTestimony(mainPanel);
+        P10_1chooseT1  choose1 = new P10_1chooseT1(mainPanel);
+        P10_2chooseT2  choose2 = new P10_2chooseT2(mainPanel);
+        P10_3chooseT3 choose3 = new P10_3chooseT3(mainPanel);
+        P11_1_0ChooseChecking selectWaytoCheck = new P11_1_0ChooseChecking(mainPanel);
+        P11_2_1dna dnaSelected = new P11_2_1dna(mainPanel);
+        P_Menu_icon menuBtn = new P_Menu_icon(mainPanel);
+
+        
+        mainPanel.add( start, "start");
+        mainPanel.add(warning, "warning");
+        mainPanel.add(story, "story");
+        mainPanel.add(evidence ,"evidence");
+        mainPanel.add(timeline, "timeline");
+        mainPanel.add(inforRicko, "informationRicko");
+        mainPanel.add(instruction, "instruction");
+        mainPanel.add(testbg, "testbg");
+        mainPanel.add(amitest, "amitest");
+        mainPanel.add(desmondtest, "desmondtest");
+        mainPanel.add(poppytest, "poppytest");
+        mainPanel.add(choosetestbg, "choosetestbg");
+        mainPanel.add(choose1, "choose1");
+        mainPanel.add(choose2, "choose2");
+        mainPanel.add(choose3, "choose3");
+        mainPanel.add(selectWaytoCheck,"selectWaytoCheck");
+        mainPanel.add(dnaSelected,"dnaSelected");
+        mainPanel.add(new P11_1_1chooseFingerEvi(mainPanel),"fingerSelected");
+        mainPanel.add(new P11_3_1food(mainPanel),"foodSelected");
+        
+        mainPanel.add(new P11_3_2format(mainPanel),"foodFormat");
+        mainPanel.add(new P11_3_2_1formatmatk(mainPanel),"format1");
+        mainPanel.add(new P11_3_2_2formatCOI(mainPanel),"format2");
+        mainPanel.add(new P11_3_2_3format16S(mainPanel),"format3");
+        
+        mainPanel.add(new P_Hint_page(mainPanel),"toolPage");
+        mainPanel.add(new P11_2_2dnanega(mainPanel),"adjust");
+        mainPanel.add(menuBtn,"menuBtn");
+        mainPanel.add(new P4_2Timeline2(mainPanel),"timelineLookBack");
+        mainPanel.add(new P4Evidence2(mainPanel),"evidenceLookBack");
+        mainPanel.add(new testimonyPageLookBack(mainPanel),"testimonyPageLookBack");
+        
+        mainPanel.add(new P11_1_Winefingerprint(mainPanel),"Wine");
+        mainPanel.add(new P11_1_Spoonfingerprint_1(mainPanel),"Spoon1");
+        mainPanel.add(new P11_1_Spoonfingerprint_2(mainPanel),"Spoon2");
+        mainPanel.add(new P11_1_Boxfingerprint_1(mainPanel),"BOX1");
+        mainPanel.add(new P11_1_Boxfingerprint_2(mainPanel),"BOX2");
+        mainPanel.add(new P11_1_Liquorfingerprint(mainPanel),"Liquor");
+        mainPanel.add(new P11_1_Waterfingerprint(mainPanel),"Water");
+        mainPanel.add(new P11_1_PlatefingerprintPlate(mainPanel),"Plate");
+        mainPanel.add(new P11_1_MedfingerprintPot_1(mainPanel),"MedF1");
+        mainPanel.add(new P11_1_MedfingerprintPot_2(mainPanel),"MedF2");
+//        mainPanel.add()
+        
+        mainPanel.add(new P12ChooseSuspect(mainPanel),"pickKiller");
+        
+        mainPanel.add(new P13Newspaper(mainPanel),"Newspaper");
+        mainPanel.add(new Choose_WrongSuspect(mainPanel),"ChooseWrong");
+        mainPanel.add(new True_criminal(mainPanel),"Newspaper_detail");
+        cd.show(mainPanel, "start");
+    }//GEN-LAST:event_restartMouseClicked
+
+    private void dooChaleryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dooChaleryMouseClicked
+        // TODO add your handling code here:
+        cd.show(mainPanel, "Newspaper");
+    }//GEN-LAST:event_dooChaleryMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel dooChalery;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel restart;
     // End of variables declaration//GEN-END:variables
 }

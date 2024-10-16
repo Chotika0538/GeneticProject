@@ -46,8 +46,6 @@ public class P11_1_MedfingerprintPot_2 extends javax.swing.JPanel {
         coin = new javax.swing.JLabel();
         finger1JL = new javax.swing.JLabel();
         coinLB = new javax.swing.JLabel();
-        fileLB1 = new javax.swing.JLabel();
-        toolLB = new javax.swing.JLabel();
         confirmBT = new javax.swing.JButton();
         zoomAmiBT = new javax.swing.JButton();
         zoomDesmondBT = new javax.swing.JButton();
@@ -57,6 +55,9 @@ public class P11_1_MedfingerprintPot_2 extends javax.swing.JPanel {
         chooseDesmond = new javax.swing.JCheckBox();
         choosePoppy = new javax.swing.JCheckBox();
         chooseRicko = new javax.swing.JCheckBox();
+        backBt = new javax.swing.JButton();
+        toolLB2 = new javax.swing.JLabel();
+        fileLB1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -82,24 +83,6 @@ public class P11_1_MedfingerprintPot_2 extends javax.swing.JPanel {
         add(coinLB);
         coinLB.setBounds(1100, 10, 70, 80);
 
-        fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
-        fileLB1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fileLB1MouseClicked(evt);
-            }
-        });
-        add(fileLB1);
-        fileLB1.setBounds(1040, 20, 70, 70);
-
-        toolLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
-        toolLB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                toolLBMouseClicked(evt);
-            }
-        });
-        add(toolLB);
-        toolLB.setBounds(980, 10, 70, 80);
-
         confirmBT.setBackground(new java.awt.Color(242, 242, 242));
         confirmBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
         confirmBT.setText("Confirm ");
@@ -110,7 +93,7 @@ public class P11_1_MedfingerprintPot_2 extends javax.swing.JPanel {
             }
         });
         add(confirmBT);
-        confirmBT.setBounds(1010, 600, 100, 40);
+        confirmBT.setBounds(1000, 610, 100, 40);
 
         zoomAmiBT.setBackground(new java.awt.Color(242, 242, 242));
         zoomAmiBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
@@ -180,6 +163,38 @@ public class P11_1_MedfingerprintPot_2 extends javax.swing.JPanel {
         add(chooseRicko);
         chooseRicko.setBounds(630, 90, 20, 20);
 
+        backBt.setBackground(new java.awt.Color(242, 242, 242));
+        backBt.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        backBt.setText("<Back");
+        backBt.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
+        backBt.setVisible(false);
+        backBt.setEnabled(false);
+        backBt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtActionPerformed(evt);
+            }
+        });
+        add(backBt);
+        backBt.setBounds(80, 620, 100, 40);
+
+        toolLB2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
+        toolLB2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                toolLB2MouseClicked(evt);
+            }
+        });
+        add(toolLB2);
+        toolLB2.setBounds(980, 10, 70, 80);
+
+        fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
+        fileLB1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fileLB1MouseClicked(evt);
+            }
+        });
+        add(fileLB1);
+        fileLB1.setBounds(1040, 20, 70, 70);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fpot2.jpg"))); // NOI18N
         add(jLabel1);
         jLabel1.setBounds(0, 0, 1200, 700);
@@ -210,21 +225,26 @@ public class P11_1_MedfingerprintPot_2 extends javax.swing.JPanel {
         cd.show(mainPanel,"Med2Ricko");
     }//GEN-LAST:event_zoomRickoBTActionPerformed
 
-    private void toolLBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toolLBMouseClicked
-        //tool icon
-        P_Hint_page.backPage=ADDRESS;
-        cd.show(mainPanel,"toolPage");
-    }//GEN-LAST:event_toolLBMouseClicked
-
-    private void fileLB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fileLB1MouseClicked
-        //file icon
-        P_Menu_icon.backPage=ADDRESS;
-        cd.show(mainPanel,"menuBtn");
-    }//GEN-LAST:event_fileLB1MouseClicked
-
     private void finger1JLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finger1JLMouseClicked
         cd.show(mainPanel, "MedF1");
     }//GEN-LAST:event_finger1JLMouseClicked
+
+    private void backBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtActionPerformed
+        // TODO add your handling code here:
+        cd.show(mainPanel,"fingerSelected");
+    }//GEN-LAST:event_backBtActionPerformed
+
+    private void toolLB2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toolLB2MouseClicked
+        // tool icon
+        P_Hint_page.backPage=ADDRESS;
+        cd.show(mainPanel,"toolPage");
+    }//GEN-LAST:event_toolLB2MouseClicked
+
+    private void fileLB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fileLB1MouseClicked
+        // file icon
+        P_Menu_icon.backPage=ADDRESS;
+        cd.show(mainPanel,"menuBtn");
+    }//GEN-LAST:event_fileLB1MouseClicked
   /* testing panel*/
 //    public static void main(String[] args){
 //        JFrame f = new JFrame();
@@ -242,17 +262,20 @@ private void addPage(){
         mainPanel.add(new P11_1_Medfmed2Wife(mainPanel,ADDRESS),"Med2Wife");
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    static javax.swing.JButton backBt;
     private javax.swing.JCheckBox chooseAmi;
     private javax.swing.JCheckBox chooseDesmond;
     private javax.swing.JCheckBox choosePoppy;
     private javax.swing.JCheckBox chooseRicko;
-    private javax.swing.JLabel coin;
-    private javax.swing.JLabel coinLB;
-    private javax.swing.JButton confirmBT;
-    private javax.swing.JLabel fileLB1;
+    static javax.swing.JLabel coin;
+    static javax.swing.JLabel coinLB;
+    static javax.swing.JButton confirmBT;
+    static javax.swing.JLabel fileLB1;
     private javax.swing.JLabel finger1JL;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel toolLB;
+    static javax.swing.JLabel toolLB;
+    static javax.swing.JLabel toolLB1;
+    static javax.swing.JLabel toolLB2;
     private javax.swing.JButton zoomAmiBT;
     private javax.swing.JButton zoomDesmondBT;
     private javax.swing.JButton zoomPoppyBT;

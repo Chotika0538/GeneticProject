@@ -78,7 +78,7 @@ public class P11_3_2_1formatmatk extends javax.swing.JPanel {
         coin.setText(" 3 ");
         coin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(coin);
-        coin.setBounds(1120, 0, 40, 60);
+        coin.setBounds(1110, 0, 40, 60);
 
         coinLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png"))); // NOI18N

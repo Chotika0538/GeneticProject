@@ -104,7 +104,7 @@ public class P10chooseTestimony extends javax.swing.JPanel {
         coin.setText(" 3 ");
         coin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add(coin);
-        coin.setBounds(1140, 0, 40, 60);
+        coin.setBounds(1132, 0, 40, 60);
 
         coinLB.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png"))); // NOI18N

@@ -73,8 +73,9 @@ public class P4_4Instruction extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(1185, 1300));
         jPanel1.setLayout(null);
 
-        backBT.setFont(new java.awt.Font("TH Sarabun New", 1, 36)); // NOI18N
-        backBT.setText("Back");
+        backBT.setBackground(new java.awt.Color(242, 242, 242));
+        backBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        backBT.setText("<Back");
         backBT.setToolTipText("");
         backBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 5, 4, 0, new java.awt.Color(174, 0, 0)));
         backBT.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,7 +89,7 @@ public class P4_4Instruction extends javax.swing.JPanel {
             }
         });
         jPanel1.add(backBT);
-        backBT.setBounds(90, 1210, 120, 50);
+        backBT.setBounds(110, 1210, 100, 40);
 
         jLabel_coin.setFont(new java.awt.Font("TH Sarabun New", 1, 20)); // NOI18N
         jLabel_coin.setForeground(new java.awt.Color(255, 202, 40));
@@ -147,8 +148,9 @@ public class P4_4Instruction extends javax.swing.JPanel {
         jPanel1.add(coinLB);
         coinLB.setBounds(1080, 10, 60, 50);
 
-        nextBT.setFont(new java.awt.Font("TH Sarabun New", 1, 36)); // NOI18N
-        nextBT.setText("Next");
+        nextBT.setBackground(new java.awt.Color(242, 242, 242));
+        nextBT.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        nextBT.setText("Next>");
         nextBT.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
         nextBT.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -156,7 +158,7 @@ public class P4_4Instruction extends javax.swing.JPanel {
             }
         });
         jPanel1.add(nextBT);
-        nextBT.setBounds(980, 1210, 120, 50);
+        nextBT.setBounds(980, 1210, 100, 40);
 
         inst_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Instruct_2.png"))); // NOI18N
         jPanel1.add(inst_2);

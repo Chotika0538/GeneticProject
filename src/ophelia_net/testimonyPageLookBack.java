@@ -86,7 +86,7 @@ public class testimonyPageLookBack extends javax.swing.JPanel {
         fingerSelBtn.setEnabled(false);
         fingerSelBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                System.out.print("test");
+                cd.show(mainPanel,"fingerSelected");
             }
         });
         add(fingerSelBtn);

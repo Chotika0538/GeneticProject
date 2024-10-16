@@ -39,7 +39,7 @@ public class P11_1_Boxfbox1Ricko extends javax.swing.JPanel {
             }
         });
         add(backBT);
-        backBT.setBounds(120, 580, 110, 40);
+        backBT.setBounds(120, 600, 110, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fbox1Ricko.jpg"))); // NOI18N
         add(jLabel1);

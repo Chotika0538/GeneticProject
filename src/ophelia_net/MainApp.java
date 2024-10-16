@@ -106,8 +106,22 @@ public class MainApp extends JFrame {
             P11_2_2dnanega.coin.setText("   "+MainApp.coins);
             P11_3_1food.coin.setText("   "+MainApp.coins);
             P11_3_2format.coin.setText("   "+MainApp.coins);
+            P11_3_2_1formatmatk.coin.setText("   "+MainApp.coins);
+            P11_3_2_1formatmatk.coin.setText("   "+MainApp.coins);
+            P11_3_2_2formatCOI.coin.setText("   "+MainApp.coins);
+            P11_3_2_3format16S.coin.setText("   "+MainApp.coins);
             P11_1_Boxfingerprint_1.coin.setText("   "+MainApp.coins);
             P11_1_Boxfingerprint_2.coin.setText("   "+MainApp.coins);
+            P11_1_Liquorfingerprint.coin.setText("   "+MainApp.coins);
+            P11_1_MedfingerprintPot_1.coin.setText("   "+MainApp.coins);
+            P11_1_MedfingerprintPot_2.coin.setText("   "+MainApp.coins);
+            P11_1_PlatefingerprintPlate.coin.setText("   "+MainApp.coins);
+            P11_1_Spoonfingerprint_1.coin.setText("   "+MainApp.coins);
+            P11_1_Spoonfingerprint_2.coin.setText("   "+MainApp.coins);
+            P11_1_Waterfingerprint.coin.setText("   "+MainApp.coins);
+            P11_1_Winefingerprint.coin.setText("   "+MainApp.coins);
+            
+            P12ChooseSuspect.coin.setText("   "+MainApp.coins);
         }catch(Exception err){
             System.out.print(err);
         }

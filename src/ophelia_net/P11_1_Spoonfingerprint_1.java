@@ -39,8 +39,6 @@ public class P11_1_Spoonfingerprint_1 extends javax.swing.JPanel {
     private void initComponents() {
 
         finger2LB = new javax.swing.JLabel();
-        fileLB1 = new javax.swing.JLabel();
-        toolLB = new javax.swing.JLabel();
         coin = new javax.swing.JLabel();
         coinLB = new javax.swing.JLabel();
         zoomRickoBT = new javax.swing.JButton();
@@ -51,6 +49,9 @@ public class P11_1_Spoonfingerprint_1 extends javax.swing.JPanel {
         chooseDesmond = new javax.swing.JCheckBox();
         choosePoppy = new javax.swing.JCheckBox();
         chooseRicko = new javax.swing.JCheckBox();
+        backBt = new javax.swing.JButton();
+        toolLB = new javax.swing.JLabel();
+        fileLB1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1200, 700));
@@ -63,24 +64,6 @@ public class P11_1_Spoonfingerprint_1 extends javax.swing.JPanel {
         });
         add(finger2LB);
         finger2LB.setBounds(300, 130, 190, 90);
-
-        fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
-        fileLB1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fileLB1MouseClicked(evt);
-            }
-        });
-        add(fileLB1);
-        fileLB1.setBounds(1040, 20, 70, 70);
-
-        toolLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
-        toolLB.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                toolLBMouseClicked(evt);
-            }
-        });
-        add(toolLB);
-        toolLB.setBounds(980, 10, 70, 80);
 
         coin.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
         coin.setFont(new java.awt.Font("Leelawadee", 1, 20)); // NOI18N
@@ -162,6 +145,38 @@ public class P11_1_Spoonfingerprint_1 extends javax.swing.JPanel {
         add(chooseRicko);
         chooseRicko.setBounds(650, 100, 20, 20);
 
+        backBt.setBackground(new java.awt.Color(242, 242, 242));
+        backBt.setFont(new java.awt.Font("Bodoni MT", 1, 18)); // NOI18N
+        backBt.setText("<Back");
+        backBt.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 5, new java.awt.Color(174, 0, 0)));
+        backBt.setVisible(false);
+        backBt.setEnabled(false);
+        backBt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtActionPerformed(evt);
+            }
+        });
+        add(backBt);
+        backBt.setBounds(50, 630, 100, 40);
+
+        toolLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
+        toolLB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                toolLBMouseClicked(evt);
+            }
+        });
+        add(toolLB);
+        toolLB.setBounds(980, 10, 70, 80);
+
+        fileLB1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/filebg.png"))); // NOI18N
+        fileLB1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                fileLB1MouseClicked(evt);
+            }
+        });
+        add(fileLB1);
+        fileLB1.setBounds(1040, 20, 70, 70);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/fspoon1Main.png"))); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel1);
@@ -192,17 +207,22 @@ public class P11_1_Spoonfingerprint_1 extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_finger2LBMouseClicked
 
-    private void fileLB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fileLB1MouseClicked
-        // file Icon
-        P_Menu_icon.backPage=ADDRESS;
-        cd.show(mainPanel,"menuBtn");
-    }//GEN-LAST:event_fileLB1MouseClicked
+    private void backBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtActionPerformed
+        // TODO add your handling code here:
+        cd.show(mainPanel,"fingerSelected");
+    }//GEN-LAST:event_backBtActionPerformed
 
     private void toolLBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toolLBMouseClicked
-        // tool Icon
+        // tool icon
         P_Hint_page.backPage=ADDRESS;
         cd.show(mainPanel,"toolPage");
     }//GEN-LAST:event_toolLBMouseClicked
+
+    private void fileLB1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fileLB1MouseClicked
+        // file icon
+        P_Menu_icon.backPage=ADDRESS;
+        cd.show(mainPanel,"menuBtn");
+    }//GEN-LAST:event_fileLB1MouseClicked
   /* testing panel*/
 //    public static void main(String[] args){
 //        JFrame f = new JFrame();
@@ -220,16 +240,17 @@ private void addPage(){
         mainPanel.add(new P11_1_SpoonfspoonWife_1(mainPanel,ADDRESS),"Spoon1Wife");
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    static javax.swing.JButton backBt;
     private javax.swing.JCheckBox chooseAmi;
     private javax.swing.JCheckBox chooseDesmond;
     private javax.swing.JCheckBox choosePoppy;
     private javax.swing.JCheckBox chooseRicko;
-    private javax.swing.JLabel coin;
-    private javax.swing.JLabel coinLB;
-    private javax.swing.JLabel fileLB1;
+    static javax.swing.JLabel coin;
+    static javax.swing.JLabel coinLB;
+    static javax.swing.JLabel fileLB1;
     private javax.swing.JLabel finger2LB;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel toolLB;
+    static javax.swing.JLabel toolLB;
     private javax.swing.JButton zoomAmiBT;
     private javax.swing.JButton zoomDesmondBT;
     private javax.swing.JButton zoomPoppyBT;
