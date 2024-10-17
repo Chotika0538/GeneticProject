@@ -149,7 +149,7 @@ public class P10chooseTestimony extends javax.swing.JPanel {
         add(chooseT3BT);
         chooseT3BT.setBounds(910, 560, 170, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/chooseTestimony.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/chooseWitness.png"))); // NOI18N
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(jLabel2);
         jLabel2.setBounds(0, 0, 1200, 700);
