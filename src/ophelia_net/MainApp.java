@@ -82,6 +82,7 @@ public class MainApp extends JFrame {
         
         mainPanel.add(new P13Newspaper(mainPanel),"Newspaper");
         mainPanel.add(new Choose_WrongSuspect(mainPanel),"ChooseWrong");
+        mainPanel.add(new Answer_AllTest(mainPanel),"AllTestAnswer");
         mainPanel.add(new True_criminal(mainPanel),"Newspaper_detail");
         
         

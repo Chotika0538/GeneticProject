@@ -17,7 +17,8 @@ public class P12ChooseSuspect extends javax.swing.JPanel {
     private CardLayout cd;
     private JPanel mainPanel;
     private ButtonGroup group;
-    
+     public static String backPage;
+     private final String ADDRESS = "pickKiller";
     public P12ChooseSuspect(JPanel mainPanel) {
         this.mainPanel = mainPanel;
         cd = (CardLayout) mainPanel.getLayout();
@@ -99,7 +100,7 @@ public class P12ChooseSuspect extends javax.swing.JPanel {
             }
         });
         add(fileLB);
-        fileLB.setBounds(1000, 20, 70, 70);
+        fileLB.setBounds(1020, 20, 70, 70);
 
         coin.setFont(new java.awt.Font("Leelawadee", 1, 20)); // NOI18N
         coin.setText("   3");
@@ -156,16 +157,16 @@ public class P12ChooseSuspect extends javax.swing.JPanel {
                     cd.show(mainPanel, "ChooseWrong");
                 }
                 else if(choosePoppyBT.isSelected()){
-                    cd.show(mainPanel, "Newspaper");
+//                    cd.show(mainPanel,"Newspaper");
+//                    Answer_AllTest.backPage=ADDRESS;
+                    cd.show(mainPanel, "AllTestAnswer");
+                    
                 }
-                
-            
-           
             }
             //Choose No option
-            else{
-                cd.show(mainPanel, "pickKiller");
-            }
+//            else{
+//                cd.show(mainPanel, "pickKiller");
+//            }
         }
     }//GEN-LAST:event_comfirmJBActionPerformed
 

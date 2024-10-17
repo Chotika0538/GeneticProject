@@ -159,13 +159,17 @@ public class P10chooseTestimony extends javax.swing.JPanel {
         if(checked[0]){
             cd.show(mainPanel, "choose1");
         }else if(MainApp.coins>0){
-            MainApp.coins-=1;
-            MainApp.setCoins();
-            checked[0]=true;
-            testimonyPageLookBack.addImage(new ImageIcon(getClass().getResource("/ophelia_net/t1.jpg")).getImage());  // Static call to add the image 
-            cd.show(mainPanel, "choose1");
-            chosseT1BT.setBackground(Color.green);
-            chosseT1BT.setText("chosen");
+            int result = JOptionPane.showConfirmDialog(null,"you will lost 1 coin. Do you want to continue?","Confirm", JOptionPane.YES_NO_OPTION);
+            if(result == JOptionPane.YES_OPTION){
+                MainApp.coins-=1;
+                MainApp.setCoins();
+                checked[0]=true;
+                testimonyPageLookBack.addImage(new ImageIcon(getClass().getResource("/ophelia_net/t1.jpg")).getImage());  // Static call to add the image 
+                cd.show(mainPanel, "choose1");
+                chosseT1BT.setBackground(Color.green);
+                chosseT1BT.setText("chosen");
+             }
+            
        }else{
            JOptionPane.showMessageDialog(this, "You're out of coins.", "conis", JOptionPane.WARNING_MESSAGE);
        }
@@ -175,13 +179,16 @@ public class P10chooseTestimony extends javax.swing.JPanel {
         if(checked[1]){
             cd.show(mainPanel, "choose2");
         }else if(MainApp.coins>0){
-            MainApp.coins-=1;
-            MainApp.setCoins();
-            checked[1]=true;
-            testimonyPageLookBack.addImage(new ImageIcon(getClass().getResource("/ophelia_net/t2.jpg")).getImage());  // Static call to add the image 
-            cd.show(mainPanel, "choose2");
-            chooseT2BT.setBackground(Color.green);
-            chooseT2BT.setText("chosen");         
+            int result = JOptionPane.showConfirmDialog(null,"you will lost 1 coin. Do you want to continue?","Confirm", JOptionPane.YES_NO_OPTION);
+            if(result == JOptionPane.YES_OPTION){
+                MainApp.coins-=1;
+                MainApp.setCoins();
+                checked[1]=true;
+                testimonyPageLookBack.addImage(new ImageIcon(getClass().getResource("/ophelia_net/t2.jpg")).getImage());  // Static call to add the image 
+                cd.show(mainPanel, "choose2");
+                chooseT2BT.setBackground(Color.green);
+                chooseT2BT.setText("chosen");         
+            }
        }else{
            JOptionPane.showMessageDialog(this, "You're out of coins.", "conis", JOptionPane.WARNING_MESSAGE);
        }
@@ -189,15 +196,18 @@ public class P10chooseTestimony extends javax.swing.JPanel {
 
     private void chooseT3BTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseT3BTActionPerformed
        if(checked[2]){
-           cd.show(mainPanel,"choose3");
+                cd.show(mainPanel,"choose3");
        }else if(MainApp.coins>0){
-            MainApp.coins-=1;
-            MainApp.setCoins();
-            checked[2]=true;
-            testimonyPageLookBack.addImage(new ImageIcon(getClass().getResource("/ophelia_net/t3.jpg")).getImage());  // Static call to add the image     
-            cd.show(mainPanel, "choose3");
-            chooseT3BT.setBackground(Color.green);
-            chooseT3BT.setText("chosen");
+           int result = JOptionPane.showConfirmDialog(null,"you will lost 1 coin. Do you want to continue?","Confirm", JOptionPane.YES_NO_OPTION);
+            if(result == JOptionPane.YES_OPTION){
+                MainApp.coins-=1;
+                MainApp.setCoins();
+                checked[2]=true;
+                testimonyPageLookBack.addImage(new ImageIcon(getClass().getResource("/ophelia_net/t3.jpg")).getImage());  // Static call to add the image     
+                cd.show(mainPanel, "choose3");
+                chooseT3BT.setBackground(Color.green);
+                chooseT3BT.setText("chosen");
+            }
        }else{
            JOptionPane.showMessageDialog(this, "You're out of coins.", "conis", JOptionPane.WARNING_MESSAGE);
        }

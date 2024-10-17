@@ -1,6 +1,7 @@
 package ophelia_net;
 
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /*
@@ -16,7 +17,7 @@ public class Choose_WrongSuspect extends javax.swing.JPanel {
 
     private CardLayout cd;
     private JPanel mainPanel;
-    
+    private static final String ADDRESS="ChooseWrong";
     public Choose_WrongSuspect(JPanel mainPanel) {
         this.mainPanel = mainPanel;
         cd = (CardLayout) mainPanel.getLayout();
@@ -68,7 +69,7 @@ public class Choose_WrongSuspect extends javax.swing.JPanel {
             .addGroup(restartLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel4)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         restartLayout.setVerticalGroup(
             restartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,7 +96,7 @@ public class Choose_WrongSuspect extends javax.swing.JPanel {
         dooChaleryLayout.setHorizontalGroup(
             dooChaleryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dooChaleryLayout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(34, 34, 34))
         );
@@ -120,6 +121,8 @@ public class Choose_WrongSuspect extends javax.swing.JPanel {
 
     private void restartMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_restartMouseClicked
         // TODO add your handling code here:
+        int result = JOptionPane.showConfirmDialog(null,"You can not go back after you choose. Do you want to continue?","Confirm", JOptionPane.YES_NO_OPTION);
+            if(result == JOptionPane.YES_OPTION){
         MainApp.coins=3;
         P1StartPage start = new P1StartPage(mainPanel);
         P2WarningPage warning = new P2WarningPage(mainPanel);
@@ -191,11 +194,17 @@ public class Choose_WrongSuspect extends javax.swing.JPanel {
         mainPanel.add(new Choose_WrongSuspect(mainPanel),"ChooseWrong");
         mainPanel.add(new True_criminal(mainPanel),"Newspaper_detail");
         cd.show(mainPanel, "start");
+            }
     }//GEN-LAST:event_restartMouseClicked
 
     private void dooChaleryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dooChaleryMouseClicked
         // TODO add your handling code here:
-        cd.show(mainPanel, "Newspaper");
+        int result = JOptionPane.showConfirmDialog(null,"You can not go back after you choose. Do you want to continue?","Confirm", JOptionPane.YES_NO_OPTION);
+            if(result == JOptionPane.YES_OPTION){
+//                Answer_AllTest.backPage=ADDRESS;
+                cd.show(mainPanel, "AllTestAnswer");
+        //cd.show(mainPanel, "Newspaper");
+            }
     }//GEN-LAST:event_dooChaleryMouseClicked
 
 

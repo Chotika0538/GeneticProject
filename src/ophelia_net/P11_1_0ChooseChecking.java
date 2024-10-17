@@ -13,7 +13,7 @@ public class P11_1_0ChooseChecking extends javax.swing.JPanel {
     private CardLayout cd;
     private JPanel mainPanel;
     private boolean checked[] = {false,false,false}; // 0=finger , 1=dna , 2=food
-
+    private static final String ADDRESS  = "selectWaytoCheck";
     public P11_1_0ChooseChecking(JPanel mainPanel) {
         this.mainPanel = mainPanel;
         cd = (CardLayout) mainPanel.getLayout();
@@ -28,6 +28,7 @@ public class P11_1_0ChooseChecking extends javax.swing.JPanel {
 
         coin = new javax.swing.JLabel();
         coinLB = new javax.swing.JLabel();
+        toolLB = new javax.swing.JLabel();
         backBT = new javax.swing.JButton();
         fileLB = new javax.swing.JLabel();
         ingredaintSelected = new javax.swing.JLabel();
@@ -48,6 +49,15 @@ public class P11_1_0ChooseChecking extends javax.swing.JPanel {
         coinLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/coin.png"))); // NOI18N
         add(coinLB);
         coinLB.setBounds(1090, 20, 60, 60);
+
+        toolLB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/hint.png"))); // NOI18N
+        toolLB.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                toolLBMouseClicked(evt);
+            }
+        });
+        add(toolLB);
+        toolLB.setBounds(910, 10, 70, 80);
 
         backBT.setBackground(new java.awt.Color(242, 242, 242));
         backBT.setFont(new java.awt.Font("Bodoni MT", 1, 24)); // NOI18N
@@ -129,15 +139,19 @@ public class P11_1_0ChooseChecking extends javax.swing.JPanel {
         if(checked[0]){JOptionPane.showMessageDialog(this, "You can check it on file", "Success", JOptionPane.WARNING_MESSAGE);}
         //check if there's still coins left
         else if(MainApp.coins>0){
-            MainApp.coins-=1;
-            if(MainApp.coins == 0){
-                pickKillerBT.setVisible(true);
-                pickKillerBT.setEnabled(true);
+            int result = JOptionPane.showConfirmDialog(null,"you will lost 1 coin. Do you want to continue?","Confirm", JOptionPane.YES_NO_OPTION);
+            if(result == JOptionPane.YES_OPTION){
+                MainApp.coins-=1;
+                if(MainApp.coins == 0){
+                    pickKillerBT.setVisible(true);
+                    pickKillerBT.setEnabled(true);
+                }
+                MainApp.setCoins();
+                checked[0]=true;
+                cd.show(mainPanel, "fingerSelected");
+                fingerPrintSelected.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Fingtest_ch.png")));
             }
-            MainApp.setCoins();
-            checked[0]=true;
-            cd.show(mainPanel, "fingerSelected");
-            fingerPrintSelected.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Fingtest_ch.png")));
+            
        }else{
             pickKillerBT.setVisible(true);
             pickKillerBT.setEnabled(true);
@@ -149,6 +163,8 @@ public class P11_1_0ChooseChecking extends javax.swing.JPanel {
         // TODO add your handling code here:
         if(checked[1]){JOptionPane.showMessageDialog(this, "You can check it on file", "Success", JOptionPane.WARNING_MESSAGE);}
         else if(MainApp.coins>0){
+            int result = JOptionPane.showConfirmDialog(null,"you will lost 1 coin. Do you want to continue?","Confirm", JOptionPane.YES_NO_OPTION);
+            if(result == JOptionPane.YES_OPTION){
             MainApp.coins-=1;
             if(MainApp.coins==0){
                 pickKillerBT.setVisible(true);
@@ -158,6 +174,7 @@ public class P11_1_0ChooseChecking extends javax.swing.JPanel {
             checked[1]=true;
             cd.show(mainPanel, "dnaSelected");
             dnaSelected.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/DNAtest_ch.png")));
+            }
        }else{
             pickKillerBT.setVisible(true);
             pickKillerBT.setEnabled(true);
@@ -169,6 +186,8 @@ public class P11_1_0ChooseChecking extends javax.swing.JPanel {
         // TODO add your handling code here:
         if(checked[2]){JOptionPane.showMessageDialog(this, "You can check it on file", "Success", JOptionPane.WARNING_MESSAGE);}
         else if(MainApp.coins>0){
+            int result = JOptionPane.showConfirmDialog(null,"you will lost 1 coin. Do you want to continue?","Confirm", JOptionPane.YES_NO_OPTION);
+            if(result == JOptionPane.YES_OPTION){
             MainApp.coins-=1;
             if(MainApp.coins==0){
                 pickKillerBT.setVisible(true);
@@ -178,6 +197,7 @@ public class P11_1_0ChooseChecking extends javax.swing.JPanel {
             checked[2]=true;
             cd.show(mainPanel, "foodSelected");
             ingredaintSelected.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ophelia_net/Contamtest_ch.png")));
+            }
        }else{
             pickKillerBT.setVisible(true);
             pickKillerBT.setEnabled(true);
@@ -194,6 +214,12 @@ public class P11_1_0ChooseChecking extends javax.swing.JPanel {
         cd.show(mainPanel,"choosetestbg");
     }//GEN-LAST:event_backBTActionPerformed
 
+    private void toolLBMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_toolLBMouseClicked
+        // TODO add your handling code here:
+        P_Hint_page.backPage=ADDRESS;
+        cd.show(mainPanel,"toolPage");
+    }//GEN-LAST:event_toolLBMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBT;
     static javax.swing.JLabel coin;
@@ -204,5 +230,6 @@ public class P11_1_0ChooseChecking extends javax.swing.JPanel {
     private javax.swing.JLabel ingredaintSelected;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JButton pickKillerBT;
+    static javax.swing.JLabel toolLB;
     // End of variables declaration//GEN-END:variables
 }

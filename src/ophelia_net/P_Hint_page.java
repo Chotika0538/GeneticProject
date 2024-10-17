@@ -41,6 +41,7 @@ public class P_Hint_page extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1200, 700));
         setLayout(null);
 
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
         Hint_ScrollPanel.setBackground(new java.awt.Color(47, 46, 62));
@@ -85,7 +86,7 @@ public class P_Hint_page extends javax.swing.JPanel {
         jScrollPane1.setViewportView(Hint_ScrollPanel);
 
         add(jScrollPane1);
-        jScrollPane1.setBounds(0, 0, 1185, 700);
+        jScrollPane1.setBounds(0, 0, 1200, 700);
     }// </editor-fold>//GEN-END:initComponents
 
     private void closeBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeBTActionPerformed
