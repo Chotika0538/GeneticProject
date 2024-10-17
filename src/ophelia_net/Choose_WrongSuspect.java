@@ -44,11 +44,11 @@ public class Choose_WrongSuspect extends javax.swing.JPanel {
         setBackground(new java.awt.Color(0, 0, 51));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("MiTNThin", 0, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("TH Sarabun New", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("ว๊าย ว๊าย ว๊ายยย เลือกผิด แน่จริงก็จับให้ได้สิ๊");
+        jLabel1.setText("ว๊าย ว๊าย ว๊ายยย เลือกผิดจ้าาา แน่จริงก็จับให้ได้สิ๊");
         add(jLabel1);
-        jLabel1.setBounds(210, 140, 770, 80);
+        jLabel1.setBounds(250, 160, 730, 80);
 
         jPanel1.setLayout(null);
 
@@ -59,7 +59,7 @@ public class Choose_WrongSuspect extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("MiTNThin", 1, 36)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("TH Sarabun New", 1, 36)); // NOI18N
         jLabel4.setText("เริ่มเล่นใหม่");
 
         javax.swing.GroupLayout restartLayout = new javax.swing.GroupLayout(restart);
@@ -67,9 +67,9 @@ public class Choose_WrongSuspect extends javax.swing.JPanel {
         restartLayout.setHorizontalGroup(
             restartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(restartLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(38, 38, 38)
                 .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         restartLayout.setVerticalGroup(
             restartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,32 +88,33 @@ public class Choose_WrongSuspect extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("MiTNThin", 1, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("TH Sarabun New", 1, 36)); // NOI18N
         jLabel2.setText("ดูเฉลย");
 
         javax.swing.GroupLayout dooChaleryLayout = new javax.swing.GroupLayout(dooChalery);
         dooChalery.setLayout(dooChaleryLayout);
         dooChaleryLayout.setHorizontalGroup(
             dooChaleryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dooChaleryLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(dooChaleryLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
                 .addComponent(jLabel2)
-                .addGap(34, 34, 34))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         dooChaleryLayout.setVerticalGroup(
             dooChaleryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dooChaleryLayout.createSequentialGroup()
+            .addGroup(dooChaleryLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(dooChalery);
         dooChalery.setBounds(230, 190, 160, 60);
 
-        jLabel3.setFont(new java.awt.Font("MiTNThin", 1, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("TH Sarabun New", 1, 36)); // NOI18N
         jLabel3.setText("่คุณต้องการดำเนินการอย่างไรต่อ?");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(90, 20, 460, 70);
+        jLabel3.setBounds(160, 20, 350, 70);
 
         add(jPanel1);
         jPanel1.setBounds(280, 250, 630, 290);
